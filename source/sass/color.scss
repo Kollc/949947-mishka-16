@@ -1,0 +1,22 @@
+.color {
+  .color__field {
+    @include border();
+  }
+
+  .color__name-field {
+    @include title(17px,16px,#63d1bb);
+    margin-bottom: 30px;
+  }
+
+  .color__list {
+    @include list();
+  }
+
+  .color__point {
+    margin-bottom: 20px;
+  }
+
+  .color__name {
+    @include title(17px,18px);
+  }
+}

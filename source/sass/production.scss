@@ -1,0 +1,13 @@
+.production {
+  .production__title {
+    @include title(17px,24px);
+  }
+
+  .production__description {
+    @include text(13px,24px);
+  }
+
+  .production__order {
+    @include button();
+  }
+}

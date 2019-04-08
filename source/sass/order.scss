@@ -1,0 +1,14 @@
+.order {
+  .order__title {
+    @include title(17px, 24px);
+  }
+
+  .order__instruction {
+    @include text(13px,24px);
+    margin-bottom: 30px;
+  }
+
+  .setting__wrapper {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,15 @@
+.advantages {
+  margin-bottom: 50px;
+
+  .advantages__title {
+    @include title();
+  }
+
+  .advantages__list {
+    @include list();
+  }
+
+  .advantages__item {
+    @include list-point();
+  }
+}

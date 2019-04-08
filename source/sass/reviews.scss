@@ -1,0 +1,27 @@
+.reviews {
+  margin-bottom: 50px;
+
+  .reviews__title {
+    @include title();
+  }
+
+  .reviews__text {
+    @include text();
+  }
+
+  .reviews__author {
+    font-size: 17px;
+    line-height: 20px;
+    font-family: "Open Sans", "Tahoma", sans-serif;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .reviews__inst {
+    @include text(17px,30px);
+  }
+
+  .reviews__write {
+    @include button();
+  }
+}

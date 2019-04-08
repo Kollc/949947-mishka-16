@@ -1,0 +1,26 @@
+.additionally {
+  .additionally__field {
+    @include border();
+  }
+
+  .additionally__name-field {
+    @include title(17px,16px,#63d1bb);
+    margin-bottom: 30px;
+  }
+
+  .additionally__list {
+    @include list();
+  }
+
+  .additionally__point {
+    padding-bottom: 15px;
+  }
+
+  .additionally__number {
+    @include text(17px,18px);
+  }
+
+  .additionally-area {
+    border: 2px solid #000000;
+  }
+}

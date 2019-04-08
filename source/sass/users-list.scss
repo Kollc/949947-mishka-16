@@ -1,0 +1,11 @@
+.users-list {
+  @include list();
+
+  .users-list__item {
+    @include menu();
+  }
+
+  .users-list__point {
+    @include point();
+  }
+}

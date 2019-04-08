@@ -1,0 +1,15 @@
+.news-list {
+  @include list();
+
+  .news-list__item {
+    @include menu();
+  }
+
+  .news-list__item:last-child {
+    border-bottom: 1px solid #ececec;
+  }
+
+  .news-list__point {
+    @include point();
+  }
+}

@@ -1,0 +1,23 @@
+.email {
+  .email__field {
+    @include border();
+  }
+
+  .email__name-field {
+    @include title(17px,16px,#63d1bb);
+    margin-bottom: 30px;
+  }
+
+  .email__list {
+    @include list();
+  }
+
+  .email__point {
+    padding-bottom: 15px;
+    border-bottom: 2px solid #000000;
+  }
+
+  .email__number {
+    @include text(17px,18px);
+  }
+}

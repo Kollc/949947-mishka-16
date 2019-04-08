@@ -1,0 +1,22 @@
+.type {
+  .type__field {
+    @include border();
+  }
+
+  .type__name-field {
+    @include title(17px,16px,#63d1bb);
+    margin-bottom: 30px;
+  }
+
+  .type__list {
+    @include list();
+  }
+
+  .type__point {
+    margin-bottom: 20px;
+  }
+
+  .type__name {
+    @include title(17px,18px);
+  }
+}

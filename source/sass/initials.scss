@@ -1,0 +1,35 @@
+.initials {
+  .initials__field {
+    @include border();
+  }
+
+  .initials__name-field {
+    @include title(17px,16px,#63d1bb);
+    margin-bottom: 30px;
+  }
+
+  .initials__list {
+    @include list();
+  }
+
+  .initials__name {
+    @include title(17px,18px);
+  }
+
+  .initials__point {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #000000;
+  }
+
+  .initials__names {
+    @include text(17px,18px);
+  }
+
+  .initials__surname {
+    @include text(17px,18px);
+  }
+
+  .initials__patronymic {
+    @include text(17px,18px);
+  }
+}

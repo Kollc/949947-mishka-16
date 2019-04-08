@@ -1,0 +1,6 @@
+.develop {
+  .develop__item {
+    @include list-point(19px ,18px);
+    text-decoration: none;
+  }
+}

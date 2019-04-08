@@ -1,0 +1,9 @@
+.setting {
+  .setting__instuction {
+    @include text(14px,16px);
+  }
+
+  .setting__order {
+    @include button(14px,70px);
+  }
+}

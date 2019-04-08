@@ -1,0 +1,26 @@
+.contacts {
+  margin-bottom: 40px;
+
+  .contacts__title {
+    @include title();
+  }
+
+  .contacts__list {
+    @include text();
+    margin-bottom: 70px;
+  }
+
+  .contacts__value {
+    padding-bottom: 30px;
+  }
+
+  .contacts__field {
+    padding-right: 30px;
+    vertical-align: top;
+    padding-bottom: 30px;
+  }
+
+  .contacts__write {
+    @include button();
+  }
+}

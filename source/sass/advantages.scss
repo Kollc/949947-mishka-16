@@ -17,6 +17,7 @@
     @include list-point();
   }
 }
+
 @media (min-width: 768px) {
   .advantages {
     .advantages__list {
@@ -31,6 +32,7 @@
     }
   }
 }
+
 @media (min-width: 1200px) {
   .advantages {
     padding-left: 175px;

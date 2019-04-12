@@ -70,6 +70,7 @@
     flex-direction: column;
   }
 }
+
 @media (min-width: 768px) {
   .reviews {
     .reviews__wrapper {
@@ -81,6 +82,7 @@
     }
   }
 }
+
 @media (min-width: 1200px) {
   .reviews {
     padding-left: 175px;

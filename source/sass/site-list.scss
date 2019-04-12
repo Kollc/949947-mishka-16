@@ -12,6 +12,7 @@
     @include point();
   }
 }
+
 @media (min-width: 768px) {
   .site-list {
     flex-direction: row;

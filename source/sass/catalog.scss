@@ -46,6 +46,7 @@
     flex-direction: column;
   }
 }
+
 @media (min-width: 768px) {
   .catalog {
     .catalog__item {
@@ -53,6 +54,7 @@
     }
   }
 }
+
 @media (min-width: 1200px) {
   .catalog {
     .catalog-title {

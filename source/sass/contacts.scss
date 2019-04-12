@@ -28,6 +28,7 @@
     @include button();
   }
 }
+
 @media (min-width: 768px) {
   .contacts {
     .contacts__write {
@@ -35,6 +36,7 @@
     }
   }
 }
+
 @media (min-width: 1200px) {
   .contacts {
     flex-direction: row;

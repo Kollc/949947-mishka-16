@@ -1,6 +1,17 @@
 .develop {
+  display: flex;
+
   .develop__item {
     @include list-point(19px ,18px);
     text-decoration: none;
+    padding-right: 30px;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .develop {
+    margin-top: 30px;
   }
 }

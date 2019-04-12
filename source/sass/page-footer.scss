@@ -1,0 +1,19 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+  justify-content: space-between;
+
+  .page-footer__logo-wrapper {
+    margin: 30px auto;
+  }
+}
+@media (min-width: 768px) {
+  .page-footer {
+    flex-direction: row;
+
+    .page-footer__logo-wrapper {
+      margin: 30px 0;
+    }
+  }
+}

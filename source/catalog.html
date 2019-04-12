@@ -6,6 +6,7 @@
   <title>HTML Academy: Мишка-Каталог</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
       </a>
       <nav class="main-nav">
         <!-- <меню по страницам сайта> -->
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__site-list site-list">
           <li class="site-list__point">
             <a class="site-list__item" href="catalog.html">
               Каталог товаров
@@ -30,7 +31,7 @@
         </ul>
         <!-- </меню по страницам сайта> -->
         <!-- <Меню для  пользователя> -->
-        <ul class="main-nav__list users-list">
+        <ul class="main-nav__users-list users-list">
           <li class="users-list__point">
             <!-- TODO: Пока не знаю как сделать правильно для mobil -->
             <!-- <input type="search" name="search-site" id="search-site"> -->
@@ -73,46 +74,52 @@
           </h1>
           <ul class="catalog__list">
             <li class="catalog__item">
-              <figure>
+              <figure class="catalog__item-picture">
                 <img class="catalog__item-image" src="./img/photo-hare-mobile@1x.jpg" alt="Вязаный зайчик">
                 <figcaption class="catalog__item-name">
                   Зайчик-попрыгайчик
                 </figcaption>
               </figure>
-              <p class="catalog__item-characteristic">
-                рост 30 см, вес 200 г
-              </p>
-              <p class="catalog__item-price">
-                1 200 руб.
-              </p>
+              <div>
+                <p class="catalog__item-characteristic">
+                  рост 30 см, вес 200 г
+                </p>
+                <p class="catalog__item-price">
+                  1 200 руб.
+                </p>
+              </div>
             </li>
             <li class="catalog__item">
-              <figure>
+              <figure class="catalog__item-picture">
                 <img class="catalog__item-image" src="./img/photo-bowl-mobile@1x.jpg" alt="Вязаный корзина для белья">
                 <figcaption class="catalog__item-name">
                   Корзинка для белья
                 </figcaption>
               </figure>
-              <p class="catalog__item-characteristic">
-                диаметр 15 см, высота 10 см
-              </p>
-              <p class="catalog__item-price">
-                690 руб.
-              </p>
+              <div>
+                <p class="catalog__item-characteristic">
+                  диаметр 15 см, высота 10 см
+                </p>
+                <p class="catalog__item-price">
+                  690 руб.
+                </p>
+              </div>
             </li>
             <li class="catalog__item">
-              <figure>
-                <img class="catalog__item-image" src="./img/video-mobile@1x.jpg" alt="Вязаный корзина для игрушек">
+              <figure class="catalog__item-picture">
+                <img class="catalog__item-image" src="./img/photo-toys-mobile@1x.jpg" alt="Вязаный корзина для игрушек">
                 <figcaption class="catalog__item-name">
                   Большая корзина для игрушек
                 </figcaption>
               </figure>
-              <p class="catalog__item-characteristic">
-                диаметр 30 см, высота 30 см
-              </p>
-              <p class="catalog__item-price">
-                1 500 руб.
-              </p>
+              <div>
+                <p class="catalog__item-characteristic">
+                  диаметр 30 см, высота 30 см
+                </p>
+                <p class="catalog__item-price">
+                  1 500 руб.
+                </p>
+              </div>
             </li>
           </ul>
         </section>
@@ -124,34 +131,44 @@
           </h2>
           <!-- TODO: сделать правильно( временный вариант) -->
           <video class="production__video">
-            <source src="./img/video-production.mp4">
+            <source src="./img/">
           </video>
-          <p class="production__description">
-            По просьбам наших любимых фолловеров мы сняли для вас
-            подробное видео о том, как появляются наши товары.
-          </p>
-          <button class="production__order button" type="button" name="button">
-            Сделать заказ
-          </button>
+          <div>
+            <p class="production__description">
+              По просьбам наших любимых фолловеров мы сняли для вас
+              подробное видео о том, как появляются наши товары.
+            </p>
+            <button class="production__order button" type="button" name="button">
+              Сделать заказ
+            </button>
+          </div>
         </section>
         <!-- </Секция с видео производства товаров> -->
       </main>
   </div>
   <footer class="page-footer">
-    <a class="page-footer__logo" href="index.html">
-      <img class="page-footer__logo-image" src="./img/mishka-logo-mobile.svg.png" alt="логотип магазина Мишка">
-    </a>
+    <div class="page-footer__logo-wrapper">
+      <a class="page-footer__logo" href="index.html">
+        <img class="page-footer__logo-image" src="./img/logo-footer.svg" alt="логотип магазина Мишка">
+      </a>
+    </div>
     <!-- <магазин в соц сетях> -->
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <img class="social__inst" src="./img/inst.svg" alt="Магазин Мишка в инстаграмме">
+          <a href="#">
+            <img class="social__inst" src="./img/icon-insta.svg" alt="Магазин Мишка в инстаграмме">
+          </a>
         </li>
         <li class="social__item">
-          <img class="social__fb" src="./img/fb.svg" alt="Магазин Мишка в фейсбуке">
+          <a href="#">
+            <img class="social__fb" src="./img/icon-fb.svg" alt="Магазин Мишка в фейсбуке">
+          </a>
         </li>
         <li class="social__item">
-          <img class="social__tw" src="./img/tw.svg" alt="Магазин Мишка в твиттере">
+          <a href="#">
+            <img class="social__tw" src="./img/icon-twitter.svg" alt="Магазин Мишка в твиттере">
+          </a>
         </li>
       </ul>
     </div>

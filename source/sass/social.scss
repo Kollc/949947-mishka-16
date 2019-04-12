@@ -1,0 +1,15 @@
+.social {
+  margin: 30px auto;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+
+  .social__list {
+    @include list();
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .social__item {
+    margin: 0 20px;
+  }
+}

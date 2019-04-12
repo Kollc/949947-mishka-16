@@ -1,5 +1,7 @@
 .users-list {
   @include list();
+  display: flex;
+  flex-direction: column;
 
   .users-list__item {
     @include menu();
@@ -8,4 +10,11 @@
   .users-list__point {
     @include point();
   }
+}
+
+@media (min-width: 768px) {
+  .users-list {
+    flex-direction: row;
+  }
+
 }

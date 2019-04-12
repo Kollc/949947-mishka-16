@@ -10,6 +10,8 @@
 
   .color__list {
     @include list();
+    display: flex;
+    flex-direction: column;
   }
 
   .color__point {
@@ -18,5 +20,15 @@
 
   .color__name {
     @include title(17px,18px);
+  }
+}
+
+@media (min-width: 768px) {
+  .color {
+    .color__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 500px;
+    }
   }
 }

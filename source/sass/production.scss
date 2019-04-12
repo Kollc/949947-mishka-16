@@ -1,4 +1,9 @@
 .production {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ececec;
+  margin: 30px 0 60px;
+
   .production__title {
     @include title(17px,24px);
   }
@@ -8,6 +13,26 @@
   }
 
   .production__order {
-    @include button();
+    @include button(15px,20px);
+    width: 192px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .production {
+    .production__video {
+      order: -1;
+    }
+
+    .production__order {
+      width: 586px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .production {
+    flex-direction: row;
   }
 }

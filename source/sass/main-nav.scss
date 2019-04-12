@@ -1,0 +1,11 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

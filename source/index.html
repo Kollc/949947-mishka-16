@@ -6,6 +6,7 @@
   <title>HTML Academy: Мишка-Главная</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
       </a>
       <nav class="main-nav">
         <!-- <меню по страницам сайта> -->
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__site-list site-list">
           <li class="site-list__point">
             <a class="site-list__item" href="catalog.html">
               Каталог товаров
@@ -30,7 +31,7 @@
         </ul>
         <!-- </меню по страницам сайта> -->
         <!-- <Меню для  пользователя> -->
-        <ul class="main-nav__list users-list">
+        <ul class="main-nav__users-list users-list">
           <li class="users-list__point">
             <!-- TODO: Пока не знаю как сделать правильно для mobil -->
             <!-- <input type="search" name="search-site" id="search-site"> -->
@@ -65,69 +66,84 @@
       </p>
     </header>
     <main class="page-main">
-      <h1 class="visually-hidden">
+      <!-- <h1 class="visually-hidden">
         Магазин мишка
-      </h1>
+      </h1> -->
       <section class="site-guide">
         <h2 class="site-guide__title">
-          Милые штуки ручной работы для дома
+          Милые штуки
+          ручной
+          работы для дома
         </h2>
-        <div class="site-guide__item site-guide__item--interior">
-          <a class="site-guide__links site-guide__links--interior" href="catalog.html">
-            Предметы интерьера
-          </a>
-        </div>
-        <div class="site-guide__item site-guide__item--children">
-          <a class="site-guide__links site-guide__links--children" href="catalog.html">
-            Детские игрушки
-          </a>
+        <div class="site-guide__item-wrapper">
+          <div class="site-guide__item site-guide__item--interior">
+            <a class="site-guide__links site-guide__links--interior" href="catalog.html">
+              Предметы интерьера
+            </a>
+          </div>
+          <div class="site-guide__item site-guide__item--children">
+            <a class="site-guide__links site-guide__links--children" href="catalog.html">
+              Детские игрушки
+            </a>
+          </div>
         </div>
       </section>
       <!-- <секция товара недели> -->
       <section class="product-week">
-        <h2 class="product-week__title">
-          Вязаные корзинки
-        </h2>
-        <b class="product-week__product">
-          Товар недели
-        </b>
-        <p class="product-week__description">
-          Экологически чистая пряжа, ручная работа.
-          Доступны в шести расцветках, и трех размерах.
-        </p>
-        <!-- <таблица характеристик товара> -->
-        <table class="product-week__characteristic">
-          <tr>
-            <td class="product-week__field">
-              Цвет:
-            </td>
-            <td class="product-week__value">
-              «Тиффани»/серый
-            </td>
-          </tr>
-          <tr>
-            <td class="product-week__field">
-              Диаметр:
-            </td>
-            <td class="product-week__value">
-              25см
-            </td>
-          </tr>
-          <tr>
-            <td class="product-week__field">
-              Высота:
-            </td>
-            <td class="product-week__value">
-              15см
-            </td>
-          </tr>
-        </table>
-        <!-- </таблица характеристик товара> -->
-        <img class="product-week__product-image" src="./img/triple-set-mobile@1x.jpg" alt="Вязаная корзинка" width="260" height="315">
-        <p class="product-week__price">
-          Цена:990 руб.
-        </p>
-        <button class="product-week__order" type="button" name="button">Заказать</button>
+        <div class="product-week__title-wrapper">
+          <h2 class="product-week__title">
+            Вязаные корзинки
+          </h2>
+          <b class="product-week__product">
+            Товар недели
+          </b>
+        </div>
+        <div class="product-week__wrapper">
+          <div class="product-week__wrapper-characteristic">
+            <p class="product-week__description">
+              Экологически чистая пряжа, ручная работа.
+              Доступны в шести расцветках, и трех размерах.
+            </p>
+            <!-- <таблица характеристик товара> -->
+
+            <table class="product-week__characteristic">
+              <tr>
+                <td class="product-week__field">
+                  Цвет:
+                </td>
+                <td class="product-week__value">
+                  «Тиффани»/серый
+                </td>
+              </tr>
+              <tr>
+                <td class="product-week__field">
+                  Диаметр:
+                </td>
+                <td class="product-week__value">
+                  25см
+                </td>
+              </tr>
+              <tr>
+                <td class="product-week__field">
+                  Высота:
+                </td>
+                <td class="product-week__value">
+                  15см
+                </td>
+              </tr>
+            </table>
+          </div>
+          <!-- </таблица характеристик товара> -->
+          <div class="product-week__imagen-wrapper">
+            <img class="product-week__product-image" src="./img/triple-set-mobile@1x.jpg" alt="Вязаная корзинка" width="260" height="315">
+          </div>
+        </div>
+        <div class="product-week__price-wrapper">
+          <p class="product-week__price">
+            Цена:990 руб.
+          </p>
+          <button class="product-week__order" type="button" name="button">Заказать</button>
+        </div>
       </section>
       <!-- </секция товара недели> -->
       <!-- <секция об достоинствах нашего товара> -->
@@ -167,15 +183,23 @@
           как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
           и мои фотографии сразу стали более стильными, а также набирают больше лайков!
         </p>
-        <b class="reviews__author">
-          Анастасия Красильникова
-        </b>
-        <p class="reviews__inst">
-          @misssssiskras
-        </p>
-        <div class="reviews__wrapper">
-          <button class="reviews__next" type="button" name="button"></button>
-          <button class="reviews__back" type="button" name="button"></button>
+        <div class="reviews__wrapper-inst">
+          <div class="reviews__author-wrapper">
+            <b class="reviews__author">
+              Анастасия Красильникова
+            </b>
+            <p class="reviews__inst">
+              @misssssiskras
+            </p>
+          </div>
+          <div class="reviews__wrapper">
+            <div class="reviews__wrapper-next">
+              <button class="reviews__next" type="button" name="button"></button>
+            </div>
+            <div class="reviews__wrapper-back">
+              <button class="reviews__back" type="button" name="button"></button>
+            </div>
+          </div>
         </div>
         <button class="reviews__write button" type="button" name="button">
           Написать
@@ -184,30 +208,32 @@
       <!-- </секция отзывов> -->
       <!-- <секция контактов> -->
       <section class="contacts">
-        <h2 class="contacts__title">
-          Контакты:
-        </h2>
-        <table class="contacts__list">
-          <tr class="contacts__firts-string">
-            <td class="contacts__field">
-              e-mail:
-            </td>
-            <td class="contacts__value">
-              info@mimimishkashop.ru
-            </td>
-          </tr>
-          <tr class="contacts__second-string">
-            <td class="contacts__field">
-              адрес:
-            </td>
-            <td class="contacts__value">
-              г. Санкт-Петербург,<br>
-              ул. Большая<br>
-              Конюшенная,<br>
-              д. 19/8, офис 101
-            </td>
-          </tr>
-        </table>
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">
+            Контакты:
+          </h2>
+          <table class="contacts__list">
+            <tr class="contacts__string">
+              <td class="contacts__field">
+                e-mail:
+              </td>
+              <td class="contacts__value">
+                info@mimimishkashop.ru
+              </td>
+            </tr>
+            <tr class="contacts__string">
+              <td class="contacts__field">
+                адрес:
+              </td>
+              <td class="contacts__value">
+                г. Санкт-Петербург,<br>
+                ул. Большая<br>
+                Конюшенная,<br>
+                д. 19/8, офис 101
+              </td>
+            </tr>
+          </table>
+        </div>
         <img class="contacts__map" src="./img/map-mobile@1x.jpg" alt="Наше местонахождение на карте" width="320" height="457">
         <button class="contacts__write button" type="button" name="button">
           Напишите нам
@@ -215,32 +241,40 @@
       </section>
       <!-- </секция контактов> -->
     </main>
+    <footer class="page-footer">
+      <div class="page-footer__logo-wrapper">
+        <a class="page-footer__logo" href="index.html">
+          <img class="page-footer__logo-image" src="./img/logo-footer.svg" alt="логотип магазина Мишка">
+        </a>
+      </div>
+      <!-- <магазин в соц сетях> -->
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="#">
+              <img class="social__inst" src="./img/icon-insta.svg" alt="Магазин Мишка в инстаграмме">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#">
+              <img class="social__fb" src="./img/icon-fb.svg" alt="Магазин Мишка в фейсбуке">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#">
+              <img class="social__tw" src="./img/icon-twitter.svg" alt="Магазин Мишка в твиттере">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- </магазин в соц сетях> -->
+      <div class="page-footer__develop develop">
+        <a class="develop__item" href="https://htmlacademy.ru/intensive/adaptive">
+          Разработано
+        </a>
+      </div>
+    </footer>
   </div>
-  <footer class="page-footer">
-    <a class="page-footer__logo" href="index.html">
-      <img class="page-footer__logo-image" src="./img/mishka-logo-mobile.svg.png" alt="логотип магазина Мишка">
-    </a>
-    <!-- <магазин в соц сетях> -->
-    <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <img class="social__inst" src="./img/inst.svg" alt="Магазин Мишка в инстаграмме">
-        </li>
-        <li class="social__item">
-          <img class="social__fb" src="./img/fb.svg" alt="Магазин Мишка в фейсбуке">
-        </li>
-        <li class="social__item">
-          <img class="social__tw" src="./img/tw.svg" alt="Магазин Мишка в твиттере">
-        </li>
-      </ul>
-    </div>
-    <!-- </магазин в соц сетях> -->
-    <div class="page-footer__develop develop">
-      <a class="develop__item" href="https://htmlacademy.ru/intensive/adaptive">
-        Разработано
-      </a>
-    </div>
-  </footer>
 </body>
 
 </html>

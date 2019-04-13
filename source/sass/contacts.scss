@@ -1,13 +1,17 @@
 .contacts {
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
 
   .contacts__title {
     @include title();
   }
 
   .contacts__list {
-    @include text();
-    margin-bottom: 70px;
+    @include text(15px, 30px);
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
   }
 
   .contacts__value {
@@ -22,5 +26,25 @@
 
   .contacts__write {
     @include button();
+  }
+}
+
+@media (min-width: 768px) {
+  .contacts {
+    .contacts__write {
+      margin: 30px auto;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .contacts {
+    flex-direction: row;
+    padding-left: 175px;
+
+    .contacts__write {
+      width: 230px;
+      order: -1;
+    }
   }
 }

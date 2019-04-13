@@ -1,9 +1,34 @@
 .setting {
+  display: flex;
+  flex-direction: column;
+
   .setting__instuction {
     @include text(14px,16px);
   }
 
   .setting__order {
     @include button(14px,70px);
+  }
+
+  .setting__wrapper {
+    margin-bottom: 30px;
+  }
+
+  .setting__button-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  .setting {
+    .setting__wrapper {
+      padding-left: 170px;
+    }
+
+    .setting__button-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 }

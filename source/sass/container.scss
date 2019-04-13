@@ -2,3 +2,17 @@
   width: 320px;
   padding: 0 30px;
 }
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 50px;
+    width: 668px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 50px;
+    width: 1050px;
+  }
+}

@@ -1,5 +1,27 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
   .page-header__logo {
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    width: 88px;
+  }
+
+  .page-header__delivery {
+    @include visually-hidden();
+  }
+}
+
+@media (min-width: 768px) {
+  .page-header {
+    flex-direction: row;
+  }
+
+  .page-header__delivery {
+    @include text(15px, 24px);
   }
 }

@@ -6,6 +6,7 @@
   <title>HTML Academy: Мишка-Заказ</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
       </a>
       <nav class="main-nav">
         <!-- <меню по страницам сайта> -->
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__site-list site-list">
           <li class="site-list__point">
             <a class="site-list__item" href="catalog.html">
               Каталог товаров
@@ -30,7 +31,7 @@
         </ul>
         <!-- </меню по страницам сайта> -->
         <!-- <Меню для  пользователя> -->
-        <ul class="main-nav__list users-list">
+        <ul class="main-nav__users-list users-list">
           <li class="users-list__point">
             <!-- TODO: Пока не знаю как сделать правильно для mobil -->
             <!-- <input type="search" name="search-site" id="search-site"> -->
@@ -44,7 +45,7 @@
         </ul>
         <!-- </меню для пользователя> -->
         <!-- <Меню новостей в товарах и продаже> -->
-        <ul class="main-nav__list news-list">
+        <!-- <ul class="main-nav__list news-list">
           <li class="news-list__point">
             <a class="news-list__item" href="catalog.html">
               Новые поступление
@@ -55,14 +56,14 @@
               Распродажа
             </a>
           </li>
-        </ul>
+        </ul> -->
         <!-- </Меню новостей в товарах и продаже> -->
-      </nav>
-      <p class="page-header__delivery">
-        <a href="delivery.html">
-          Бесплатная доставка по России
-        </a>
-      </p>
+        <!-- </nav>-->
+        <p class="page-header__delivery">
+          <a href="delivery.html">
+            Бесплатная доставка по России
+          </a>
+        </p>
     </header>
     <main class="page-main">
       <section class="order">
@@ -201,31 +202,41 @@
             </fieldset>
           </div>
           <!-- </поле для ввода дополниельных параметров> -->
-          <p class="setting__instuction">
-            *Поля обязательны для заполнения
-          </p>
-          <button class="setting__order button" type="submit" name="submit-setting">
-            Отправить заказ
-          </button>
+          <div class="setting__button-wrapper">
+            <p class="setting__instuction">
+              *Поля обязательны для заполнения
+            </p>
+            <button class="setting__order button" type="submit" name="submit-setting">
+              Отправить заказ
+            </button>
+          </div>
         </form>
       </section>
     </main>
   </div>
   <footer class="page-footer">
-    <a class="page-footer__logo" href="index.html">
-      <img class="page-footer__logo-image" src="./img/mishka-logo-mobile.svg.png" alt="логотип магазина Мишка">
-    </a>
+    <div class="page-footer__logo-wrapper">
+      <a class="page-footer__logo" href="index.html">
+        <img class="page-footer__logo-image" src="./img/logo-footer.svg" alt="логотип магазина Мишка">
+      </a>
+    </div>
     <!-- <магазин в соц сетях> -->
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <img class="social__inst" src="./img/inst.svg" alt="Магазин Мишка в инстаграмме">
+          <a href="#">
+            <img class="social__inst" src="./img/icon-insta.svg" alt="Магазин Мишка в инстаграмме">
+          </a>
         </li>
         <li class="social__item">
-          <img class="social__fb" src="./img/fb.svg" alt="Магазин Мишка в фейсбуке">
+          <a href="#">
+            <img class="social__fb" src="./img/icon-fb.svg" alt="Магазин Мишка в фейсбуке">
+          </a>
         </li>
         <li class="social__item">
-          <img class="social__tw" src="./img/tw.svg" alt="Магазин Мишка в твиттере">
+          <a href="#">
+            <img class="social__tw" src="./img/icon-twitter.svg" alt="Магазин Мишка в твиттере">
+          </a>
         </li>
       </ul>
     </div>

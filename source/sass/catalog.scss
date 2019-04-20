@@ -2,72 +2,120 @@
   display: flex;
   flex-direction: column;
 
-  .catalog__title {
+  &__title {
     @include title();
     background-color: #f1f1f1;
-    padding: 70px 20px;
+    padding: 70px 0;
     text-align: center;
+    margin: 0 -30px 30px;
   }
 
-  .catalog__list {
+  &__list {
     @include list();
     display: flex;
     flex-direction: column;
   }
 
-  .catalog__item-name {
+  &__item-name {
     @include title(17px, 24px);
     text-align: left;
     padding-left: 30px;
+    margin-top: 30px;
   }
 
-  .catalog__item-characteristic {
+  &__item-characteristic {
     @include text(13px,30px);
     border-bottom: 1px solid #ececec;
-    padding: 25px;
     text-align: left;
     padding-left: 30px;
+    padding-bottom: 25px;
   }
 
-  .catalog__item-price {
+  &__item-price {
     @include title(15px, 24px);
     border-bottom: 1px solid #ececec;
     padding-bottom: 25px;
     text-align: left;
     padding-left: 30px;
+    margin-bottom: 30px;
+    position: relative;
   }
 
-  .catalog__item-picture {
+  &__item-price::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url("./../img/icon-cart.svg");
+    background-repeat: no-repeat;
+    right: 27px;
+    opacity: 0.2;
+  }
+
+  &__item-picture {
     margin: 0;
   }
 
-  .catalog__item {
+  &__item {
     display: flex;
     flex-direction: column;
+  }
+
+  &__item-image {
+    width: 100%;
   }
 }
 
 @media (min-width: 768px) {
   .catalog {
-    .catalog__item {
+    &__item {
       flex-direction: row;
+      margin-bottom: 55px;
+    }
+
+    &__title {
+      margin: -45px -50px 90px;
+      padding-top: 100px;
+      padding-bottom: 75px;
+    }
+
+    &__item-price {
+      border-top: 1px solid #ececec;
+      padding-top: 25px;
+      margin-top: 39vh;
+    }
+
+    &__item-characteristic {
+      border: none;
+    }
+
+    &__item-image {
+      height: 335px;
     }
   }
 }
 
 @media (min-width: 1200px) {
   .catalog {
-    .catalog-title {
+    &-title {
       padding: 70px 100%;
     }
 
-    .catalog__list {
+    &__list {
       flex-direction: row;
     }
 
-    .catalog__item {
+    &__item {
       flex-direction: column;
       margin: 0 25px;
+    }
+
+    &__item-price {
+      margin-top: 15px;
+    }
+
+    &__description-wrapper {
+      flex-direction: column;
     }
   }
 }

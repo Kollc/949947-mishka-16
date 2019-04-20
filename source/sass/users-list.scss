@@ -3,17 +3,57 @@
   display: flex;
   flex-direction: column;
 
-  .users-list__item {
+  &__item {
     @include menu();
+    position: relative;
+    padding-right: 60px;
   }
 
-  .users-list__point {
+  &__item svg {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    opacity: 0.2;
+    top: 15px;
+    left: 0;
+  }
+
+  &__point {
     @include point();
+    text-align: left;
   }
 }
-
 @media (min-width: 768px) {
   .users-list {
     flex-direction: row;
+    width: 100%;
+    padding-left: 63%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e7e7e7;
+
+    &__search {
+      font-size: 0;
+    }
+
+    &__point {
+      border: none;
+      width: auto;
+    }
+
+    &__point:first-child {
+      margin-right: 70px;
+    }
+
+    &__item svg {
+      top: 0;
+      left: -55px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .users-list {
+    order: 0;
+    width: auto;
+    padding-left: 46.5%;
   }
 }

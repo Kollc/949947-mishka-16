@@ -3,15 +3,15 @@
   display: flex;
   flex-direction: column;
 
-  .reviews__title {
+  &__title {
     @include title();
   }
 
-  .reviews__text {
+  &__text {
     @include text(15px, 30px);
   }
 
-  .reviews__author {
+  &__author {
     font-size: 17px;
     line-height: 20px;
     font-family: "Open Sans", "Tahoma", sans-serif;
@@ -19,23 +19,23 @@
     color: #000000;
   }
 
-  .reviews__inst {
+  &__inst {
     @include text(17px,30px);
     margin-top: 0;
     margin-bottom: 30px;
   }
 
-  .reviews__write {
+  &__write {
     @include button();
   }
 
-  .reviews__wrapper {
+  &__wrapper {
     margin: 0 auto;
     display: flex;
     width: 100%;
   }
 
-  .reviews__next {
+  &__next {
     border: none;
     background-image: url("./../img/left.svg");
     background-repeat: no-repeat;
@@ -45,12 +45,12 @@
     background-position: 50px 12px;
   }
 
-  .reviews__wrapper-next {
+  &__wrapper-next {
     border: 1px solid #ececec;
     flex-grow: 1;
   }
 
-  .reviews__back {
+  &__back {
     border: none;
     background-image: url("./../img/right.svg");
     background-repeat: no-repeat;
@@ -60,31 +60,70 @@
     background-position: 50px 12px;
   }
 
-  .reviews__wrapper-back {
+  &__wrapper-back {
     border: 1px solid #ececec;
     flex-grow: 1;
   }
 
-  .reviews__wrapper-inst {
+  &__wrapper-inst {
     display: flex;
     flex-direction: column;
   }
 }
-
 @media (min-width: 768px) {
   .reviews {
-    .reviews__wrapper {
-      width: 170px;
+    margin-bottom: 200px;
+
+    &__wrapper {
+      width: auto;
+      margin: 0;
     }
 
-    .reviews__wrapper-inst {
+    &__wrapper-inst {
       flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__wrapper-next {
+      border: none;
+    }
+
+    &__wrapper-back {
+      border: none;
+    }
+
+    &__write {
+      order: -1;
+      margin-left: auto;
+      margin-bottom: -100px;
+      width: 175px;
+    }
+
+    &__text {
+      margin-bottom: 65px;
+    }
+
+    &__next {
+      width: 100px;
+    }
+
+    &__back {
+      width: 100px;
+    }
+
+    &__title {
+      @include title(43px, 50px);
     }
   }
 }
-
 @media (min-width: 1200px) {
   .reviews {
     padding-left: 175px;
+
+    &__write {
+      margin-bottom: -100px;
+      width: 175px;
+    }
   }
+
 }

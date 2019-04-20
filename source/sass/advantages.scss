@@ -3,41 +3,53 @@
   display: flex;
   flex-direction: column;
 
-  .advantages__title {
+  &__title {
     @include title();
+    margin: 0;
   }
 
-  .advantages__list {
+  &__list {
     @include list();
     display: flex;
     flex-direction: column;
   }
 
-  .advantages__item {
+  &__item {
     @include list-point();
+    position: relative;
+    width: 81%;
+  }
+
+  &__item path {
+    fill: #63d1bb;
+  }
+
+  &__item svg {
+    position: absolute;
+    bottom: 55px;
   }
 }
-
 @media (min-width: 768px) {
   .advantages {
-    .advantages__list {
+    margin-bottom: 150px;
+
+    &__list {
       flex-direction: row;
       flex-wrap: wrap;
     }
 
-    .advantages__item {
+    &__item {
       //Временно
       margin-right: 60px;
       width: 250px;
     }
   }
 }
-
 @media (min-width: 1200px) {
   .advantages {
     padding-left: 175px;
 
-    .advantages__item {
+    &__item {
       //Временно
       margin-right: 60px;
       width: 300px;

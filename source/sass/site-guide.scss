@@ -2,12 +2,12 @@
   background-image: url("./../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: -80px 0;
-  margin-bottom: 30px;
   background-size: 488px 320px;
   display: flex;
   flex-direction: column;
+  margin: 0 -30px 30px;
 
-  .site-guide__title {
+  &__title {
     font-size: 27px;
     line-height: 30px;
     font-family: "Open Sans", "Tahoma", sans-serif;
@@ -16,14 +16,12 @@
     padding-bottom: 120px;
     padding-top: 75px;
     text-align: center;
-    margin: 0;
+    margin: 0 auto;
   }
 
-  .site-guide__item {
-    padding: 30px 0;
-  }
-
-  .site-guide__links {
+  &__links {
+    display: block;
+    position: relative;
     font-size: 19px;
     line-height: 24px;
     font-family: "Open Sans", "Tahoma", sans-serif;
@@ -34,39 +32,91 @@
     cursor: pointer;
   }
 
-  .site-guide__item--interior {
+  &__links--interior {
     background-color: #63d1bb;
   }
 
-  .site-guide__item--children {
+  &__links--interior::after {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    right: 0;
+    top: 20px;
+    background-image: url("./../img/icon-interior.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.2;
+  }
+
+  &__links--children {
     background-color: #56c3b2;
   }
 
-  .site-guide__item-wrapper {
+  &__links--children::after {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    right: 15px;
+    top: 20px;
+    background-image: url("./../img/icon-toy.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.2;
+  }
+
+  &__item-wrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 }
-
 @media (min-width: 768px) {
   .site-guide {
     flex-wrap: wrap;
     background-image: url("./../img/hero-tablet@1x.jpg");
 
-    .site-guide__title {
-      max-width: 515px;
+    &__title {
+      width: 550px;
     }
 
-    .site-guide__item--interior {
+    &__title br {
+      display: none;
+    }
+
+    &__item--interior {
       flex-grow: 1;
     }
 
-    .site-guide__item--children {
+    &__item--children {
       flex-grow: 1;
     }
 
-    .site-guide__item-wrapper {
+    &__item-wrapper {
       flex-direction: row;
+    }
+
+    &__links {
+      flex-grow: 1;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .site-guide {
+    margin: -45px 0 0;
+
+    &__title {
+      font-size: 53px;
+      line-height: 57px;
+      width: 650px;
+      margin-top: 170px;
+      margin-bottom: 350px;
+    }
+
+    &__item-wrapper {
+      margin-bottom: 70px;
+      width: 100%;
     }
   }
 }

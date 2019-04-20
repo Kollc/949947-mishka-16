@@ -1,7 +1,7 @@
 .develop {
   display: flex;
 
-  .develop__item {
+  &__item {
     @include list-point(19px ,18px);
     text-decoration: none;
     padding-right: 30px;

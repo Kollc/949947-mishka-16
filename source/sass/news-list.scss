@@ -1,15 +1,36 @@
 .news-list {
+  display: none;
   @include list();
 
-  .news-list__item {
+  &__item {
     @include menu();
   }
 
-  .news-list__item:last-child {
+  &__item:last-child {
     border-bottom: 1px solid #ececec;
   }
 
-  .news-list__point {
+  &__point {
     @include point();
+  }
+}
+@media (min-width: 1200px) {
+  .news-list {
+    display: flex;
+    order: 2;
+    margin-top: 20px;
+
+    &__item
+    {
+      padding-right: 55px;
+    }
+
+    &__item:last-child {
+      border: none;
+    }
+
+    &__point {
+      border: none;
+    }
   }
 }

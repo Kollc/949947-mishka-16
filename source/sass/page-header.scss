@@ -25,6 +25,7 @@
     flex-direction: column;
   }
 }
+
 @media (min-width: 768px) {
   .page-header {
     flex-direction: row;
@@ -47,6 +48,7 @@
     }
   }
 }
+
 @media (min-width: 1200px) {
   .page-header {
     &__delivery {

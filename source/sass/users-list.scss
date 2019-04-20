@@ -23,6 +23,7 @@
     text-align: left;
   }
 }
+
 @media (min-width: 768px) {
   .users-list {
     flex-direction: row;
@@ -50,6 +51,7 @@
     }
   }
 }
+
 @media (min-width: 1200px) {
   .users-list {
     order: 0;

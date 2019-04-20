@@ -73,6 +73,7 @@
     flex-direction: column;
   }
 }
+
 @media (min-width: 768px) {
   .product-week {
     &__product-image {
@@ -114,6 +115,7 @@
     }
   }
 }
+
 @media (min-width: 1200px) {
   .product-week {
     padding-left: 175px;

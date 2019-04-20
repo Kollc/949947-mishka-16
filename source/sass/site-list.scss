@@ -13,6 +13,7 @@
     text-align: left;
   }
 }
+
 @media (min-width: 768px) {
   .site-list {
     flex-direction: row;
@@ -30,6 +31,7 @@
     }
   }
 }
+
 @media (min-width: 1200px) {
   .site-list {
     order: -1;

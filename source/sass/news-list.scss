@@ -1,5 +1,6 @@
 .news-list {
   display: none;
+
   @include list();
 
   &__item {
@@ -14,14 +15,14 @@
     @include point();
   }
 }
+
 @media (min-width: 1200px) {
   .news-list {
     display: flex;
     order: 2;
     margin-top: 20px;
 
-    &__item
-    {
+    &__item {
       padding-right: 55px;
     }
 

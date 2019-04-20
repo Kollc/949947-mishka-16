@@ -15,15 +15,8 @@
       <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="./img/mishka-logo-mobile.svg.png" alt="магазин «Мишка»" width="86" height="35">
       </a>
-
-
       <nav class="main-nav main-nav--nojs">
-
-
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-
-
-
         <!-- <меню по страницам сайта> -->
         <ul class="main-nav__site-list site-list">
           <li class="site-list__point">
@@ -63,24 +56,26 @@
         </ul>
         <!-- </меню для пользователя> -->
         <!-- <Меню новостей в товарах и продаже> -->
-        <ul class="main-nav__list news-list">
-          <li class="news-list__point">
-            <a class="news-list__item" href="catalog.html">
-              Новые поступление
+        <div class="main-nav__news-wrapper">
+          <ul class="main-nav__list news-list">
+            <li class="news-list__point">
+              <a class="news-list__item" href="catalog.html">
+                Новые поступление
+              </a>
+            </li>
+            <li class="news-list__point">
+              <a class="news-list__item" href="catalog.html">
+                Распродажа
+              </a>
+            </li>
+          </ul>
+          <!-- </Меню новостей в товарах и продаже> -->
+          <p class="page-header__delivery">
+            <a href="delivery.html">
+              Бесплатная доставка по России
             </a>
-          </li>
-          <li class="news-list__point">
-            <a class="news-list__item" href="catalog.html">
-              Распродажа
-            </a>
-          </li>
-        </ul>
-        <!-- </Меню новостей в товарах и продаже> -->
-        <p class="page-header__delivery">
-          <a href="delivery.html">
-            Бесплатная доставка по России
-          </a>
-        </p>
+          </p>
+        </div>
       </nav>
     </header>
     <main class="page-main">

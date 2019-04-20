@@ -46,3 +46,13 @@
     width: 100%;
   }
 }
+
+@media (min-width: 1200px) {
+  .main-nav {
+    &__news-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}

@@ -15,15 +15,8 @@
       <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="./img/mishka-logo-mobile.svg.png" alt="магазин «Мишка»" width="86" height="35">
       </a>
-
-
       <nav class="main-nav main-nav--nojs">
-
-
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-
-
-
         <!-- <меню по страницам сайта> -->
         <ul class="main-nav__site-list site-list">
           <li class="site-list__point">
@@ -63,24 +56,26 @@
         </ul>
         <!-- </меню для пользователя> -->
         <!-- <Меню новостей в товарах и продаже> -->
-        <ul class="main-nav__list news-list">
-          <li class="news-list__point">
-            <a class="news-list__item" href="catalog.html">
-              Новые поступление
+        <div class="main-nav__news-wrapper">
+          <ul class="main-nav__list news-list">
+            <li class="news-list__point">
+              <a class="news-list__item" href="catalog.html">
+                Новые поступление
+              </a>
+            </li>
+            <li class="news-list__point">
+              <a class="news-list__item" href="catalog.html">
+                Распродажа
+              </a>
+            </li>
+          </ul>
+          <!-- </Меню новостей в товарах и продаже> -->
+          <p class="page-header__delivery">
+            <a href="delivery.html">
+              Бесплатная доставка по России
             </a>
-          </li>
-          <li class="news-list__point">
-            <a class="news-list__item" href="catalog.html">
-              Распродажа
-            </a>
-          </li>
-        </ul>
-        <!-- </Меню новостей в товарах и продаже> -->
-        <p class="page-header__delivery">
-          <a href="delivery.html">
-            Бесплатная доставка по России
-          </a>
-        </p>
+          </p>
+        </div>
       </nav>
     </header>
     <main class="page-main">
@@ -180,16 +175,13 @@
             Скандинавский стиль по российской цене
           </li>
           <li class="advantages__item advantages__item--photo">
-
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="33.05px" height="27.857px" viewBox="47.475 50.071 33.05 27.857" enable-background="new 47.475 50.071 33.05 27.857"
               xml:space="preserve">
               <path fill="#231F20" d="M80.525,58.808c0-4.825-3.912-8.736-8.736-8.736c-3.405,0-6.348,1.951-7.789,4.793 c-1.441-2.842-4.384-4.793-7.789-4.793c-4.825,0-8.736,3.911-8.736,8.736c0,9.127,14.657,19.121,16.525,19.121 C65.869,77.929,80.525,67.979,80.525,58.808z" />
             </svg>
-
             Увеличивает лайки на фотографиях
           </li>
           <li class="advantages__item advantages__item--related">
-
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="34.373px" height="34.373px" viewBox="0 0 34.373 34.373" enable-background="new 0 0 34.373 34.373"
               xml:space="preserve">
               <g>
@@ -208,11 +200,9 @@
                 <path d="M32.298,8.999L5.552,29.838c0.544,0.501,1.114,0.962,1.708,1.382l25.962-20.228C32.959,10.314,32.651,9.648,32.298,8.999z" />
               </g>
             </svg>
-
             Связано вручную с любовью и умилением
           </li>
           <li class="advantages__item advantages__item--support">
-
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="54.156px" height="23.183px" viewBox="612.532 500.386 54.156 23.183" enable-background="new 612.532 500.386 54.156 23.183"
               xml:space="preserve">
               <g>
@@ -220,11 +210,9 @@
                 <path d="M656.267,507.132c-1.284,1.605-1.969,3.25-1.965,4.84c-0.007,1.597,0.677,3.238,1.968,4.847 c6.399-2.162,10.419-4.841,10.419-4.841S662.67,509.298,656.267,507.132z" />
               </g>
             </svg>
-
             Поддержка отечественного производителя
           </li>
           <li class="advantages__item advantages__item--present">
-
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32.666px" height="32.486px" viewBox="239.665 239.757 32.666 32.486" enable-background="new 239.665 239.757 32.666 32.486"
               xml:space="preserve">
               <path fill="#231F20" d="M242.56,272.243h12.504v-13.91H242.56V272.243z M270.742,248.623h-7.335 c0.521-0.267,0.984-0.549,1.396-0.845c1.588-1.133,2.424-2.57,2.42-3.999c0.002-1.169-0.556-2.202-1.359-2.901 c-0.805-0.704-1.869-1.119-3.016-1.121c-1.22-0.001-2.352,0.421-3.32,1.069c-1.459,0.979-2.606,2.451-3.424,4.067 c-0.039,0.079-0.078,0.157-0.115,0.236c-0.299-0.623-0.647-1.226-1.041-1.792c-0.691-0.985-1.523-1.86-2.497-2.511 c-0.97-0.646-2.103-1.069-3.322-1.069c-1.213,0.004-2.323,0.514-3.155,1.295c-0.828,0.783-1.41,1.885-1.412,3.135 c-0.002,0.73,0.211,1.494,0.649,2.188c0.552,0.872,1.424,1.628,2.633,2.248h-6.588c-0.878,0-1.591,0.712-1.591,1.59v5.897h15.396 v-7.488h1.873v7.488h15.396v-5.897C272.333,249.334,271.621,248.623,270.742,248.623 M248.38,246.284 c-0.622-0.391-1-0.785-1.22-1.135c-0.22-0.354-0.294-0.662-0.296-0.963c-0.004-0.504,0.248-1.042,0.691-1.461 c0.437-0.415,1.028-0.667,1.562-0.667h0.013c0.685,0,1.366,0.231,2.046,0.683c1.018,0.671,1.975,1.85,2.645,3.187 c0.342,0.676,0.609,1.39,0.789,2.087C251.528,247.694,249.532,247.013,248.38,246.284 M258.917,244.657 c0.557-0.797,1.21-1.466,1.887-1.916c0.68-0.451,1.362-0.683,2.047-0.683h0.006c0.574,0,1.117,0.22,1.494,0.55 c0.377,0.336,0.571,0.739,0.573,1.171c-0.004,0.512-0.272,1.259-1.467,2.132c-1.138,0.825-3.101,1.673-6.127,2.265 C257.62,246.974,258.177,245.704,258.917,244.657 M256.937,272.243h12.506v-13.91h-12.506V272.243z" />
@@ -304,7 +292,6 @@
         <button class="contacts__write button" type="button" name="button">
           Напишите нам
         </button>
-
       </section>
       <!-- </секция контактов> -->
     </main>

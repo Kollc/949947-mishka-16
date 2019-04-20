@@ -54,8 +54,8 @@
 
 @media (min-width: 1200px) {
   .users-list {
-    order: 0;
+    order: -1;
     width: auto;
-    padding-left: 20%;
+    padding-left: 0;
   }
 }

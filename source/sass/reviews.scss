@@ -1,7 +1,13 @@
 .reviews {
   margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
+
+  &__grid {
+    max-width: 320px;
+    padding: 0 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
 
   &__title {
     @include title();
@@ -73,7 +79,17 @@
 
 @media (min-width: 768px) {
   .reviews {
-    margin-bottom: 200px;
+    padding-top: 90px;
+    padding-bottom: 70px;
+
+    &__grid {
+      max-width: 768px;
+      background-image: url("./../img/review@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: 0 30px;
+      background-size: 350px 457px;
+      padding: 100px 50px 70px 175px;
+    }
 
     &__wrapper {
       width: auto;
@@ -120,7 +136,10 @@
 
 @media (min-width: 1200px) {
   .reviews {
-    padding-left: 175px;
+    &__grid {
+      max-width: auto;
+      margin: 0 auto;
+    }
 
     &__write {
       margin-bottom: -100px;

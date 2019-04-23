@@ -1,7 +1,13 @@
 .contacts {
   margin-bottom: 40px;
-  display: flex;
-  flex-direction: column;
+
+  &__grid {
+    max-width: 320px;
+    padding: 0 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
 
   &__title {
     @include title();
@@ -35,14 +41,20 @@
     border-bottom: 1px solid #62d1ba;
   }
 
-  .contacts__map {
-    margin: 0 -30px;
-    width: 380px;
+  &__map {
+    margin: 0;
+    width: 100%;
   }
 }
 
 @media (min-width: 768px) {
   .contacts {
+    &__grid {
+      padding: 0 50px;
+      max-width: 768px;
+      margin: 0 auto;
+    }
+
     &__write {
       margin: 30px auto;
     }
@@ -61,6 +73,8 @@
 
     &__title {
       margin-bottom: 65px;
+      font-size: 43px;
+      line-height: 50px;
     }
 
     &__title::before {
@@ -85,11 +99,17 @@
   .contacts {
     flex-direction: column;
     padding-left: 175px;
+    position: relative;
+    margin-bottom: 100px;
+
+    &__grid {
+      max-width: 1050px;
+    }
 
     &__write {
       width: 230px;
       order: 1;
-      margin: -50px 0 0;
+      margin: 0;
     }
 
     &__list tbody {
@@ -106,11 +126,24 @@
 
     &__title::before {
       left: -115px;
+      top: 60px;
     }
 
     &__img-wrapper {
       display: flex;
       flex-direction: row;
+    }
+
+    &__title {
+      padding-top: 80px;
+    }
+
+    &__map {
+      position: absolute;
+      top: 20px;
+      right: 260px;
+      height: 457px;
+      width: 525px;
     }
   }
 }

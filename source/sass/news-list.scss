@@ -5,6 +5,7 @@
 
   &__item {
     @include menu();
+    padding: 14px 0;
   }
 
   &__item:last-child {
@@ -20,10 +21,10 @@
   .news-list {
     display: flex;
     order: 2;
-    margin-top: 20px;
 
     &__item {
       padding-right: 60px;
+      font-size: 15px;
     }
 
     &__item:last-child {

@@ -1,7 +1,4 @@
 .production {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ececec;
   margin: 30px 0 60px;
 
   &__title {
@@ -9,6 +6,8 @@
     text-align: left;
     padding: 25px 0 25px 90px;
     position: relative;
+    border: 1px solid #ececec;
+    margin: 0;
   }
 
   &__title::before {
@@ -24,20 +23,26 @@
 
   &__description {
     @include text(13px,24px);
-    margin-top: 30px;
+    margin: 0;
   }
 
   &__order {
     @include button(15px,20px);
-    margin-bottom: 30px;
+    width: 100%;
   }
 
   &__description-wrapper {
     display: flex;
     flex-direction: column;
+    border: 1px solid #ececec;
+    border-top: none;
+    padding: 27px 34px 33px 27px;
   }
 
-  &__title-wrapper {
+  &__grid {
+    max-width: 320px;
+    padding: 0 30px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
   }
@@ -45,13 +50,27 @@
 
 @media (min-width: 768px) {
   .production {
+    &__grid {
+      padding: 0 50px;
+      max-width: 768px;
+      margin: 0 auto;
+    }
+
     &__video {
       order: -1;
       height: 455px;
+      width: 100%;
     }
 
     br {
       display: none;
+    }
+
+    &__title {
+      border: none;
+      order: 1;
+      border-left: 1px solid #ececec;
+      border-right: 1px solid #ececec;
     }
 
     &__title::before {
@@ -65,44 +84,59 @@
     &__order {
       margin: 0 auto 50px;
       width: 88%;
+      margin-bottom: 0;
+    }
+
+    &__img-wrapper {
+      order: -2;
+    }
+
+    &__description-wrapper {
+      order: 2;
     }
   }
 }
 
 @media (min-width: 1200px) {
   .production {
-    align-items: flex-end;
+    &__grid {
+      max-width: 1050px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 455px;
+    }
 
     &__video {
       order: 1;
-      width: 680px;
+      width: 682px;
     }
 
     &__description-wrapper {
-      padding: 0 55px;
-      width: 25%;
-      margin-bottom: 10px;
+      padding: 0 55px 60px;
+      width: 24%;
+      align-items: flex-end;
+      flex-direction: column;
     }
 
     &__order {
       width: 100%;
     }
 
-    &__title-wrapper {
-      align-items: flex-end;
-      flex-direction: row-reverse;
-    }
-
     &__title {
-      padding: 70px 120px 25px 0;
-      margin-bottom: -160px;
+      padding: 89px 117px 48px 55px;
       text-align: left;
       width: 200px;
       font-size: 20px;
+      border-top: 1px solid #ececec;
     }
 
     &__title::before {
-      left: 0;
+      left: 55px;
+      top: 40px;
+    }
+
+    &__description {
+      line-height: 30px;
     }
   }
 }

@@ -6,198 +6,189 @@
   <title>HTML Academy: Мишка-Каталог</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/normalize.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body>
-  <div class="container">
-    <header class="page-header">
+  <header class="page-header">
+    <nav class="main-nav main-nav--nojs">
       <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="./img/mishka-logo-mobile.svg.png" alt="магазин «Мишка»" width="86" height="35">
       </a>
-      <nav class="main-nav main-nav--nojs">
-        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-        <!-- <меню по страницам сайта> -->
-        <ul class="main-nav__site-list site-list">
-          <li class="site-list__point">
-            <a class="site-list__item" href="catalog.html">
-              Каталог товаров
-            </a>
-          </li>
-          <li class="site-list__point">
-            <a class="site-list__item" href="order.html">
-              Вязание на заказ
-            </a>
-          </li>
-        </ul>
-        <!-- </меню по страницам сайта> -->
-        <!-- <Меню для  пользователя> -->
-        <ul class="main-nav__users-list users-list">
-          <li class="users-list__point">
-            <!-- TODO: Пока не знаю как сделать правильно для mobil -->
-            <!-- <input type="search" name="search-site" id="search-site"> -->
-            <label class="users-list__item" for="search-site">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6"
-                xml:space="preserve">
-                <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z" />
-              </svg>
-              <span class="users-list__search"> Поиск по сайту</span>
-            </label>
-          </li>
-          <li class="users-list__point">
-            <a class="users-list__item" href="basket.html">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849"
-                xml:space="preserve">
-                <path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z" />
-              </svg>
-              Корзина:пока пуста
-            </a>
-          </li>
-        </ul>
-        <!-- </меню для пользователя> -->
-        <!-- <Меню новостей в товарах и продаже> -->
-        <div class="main-nav__news-wrapper">
-          <ul class="main-nav__list news-list">
-            <li class="news-list__point">
-              <a class="news-list__item" href="catalog.html">
-                Новые поступление
-              </a>
-            </li>
-            <li class="news-list__point">
-              <a class="news-list__item" href="catalog.html">
-                Распродажа
-              </a>
-            </li>
-          </ul>
-          <!-- </Меню новостей в товарах и продаже> -->
-          <p class="page-header__delivery">
-            <a href="delivery.html">
-              Бесплатная доставка по России
-            </a>
-          </p>
-        </div>
-      </nav>
-    </header>
-    <main class="page-main">
-      <!-- <список товаров > -->
-      <main class="page-main">
-        <section class="catalog">
-          <h1 class="catalog__title">
+      <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+      <!-- <меню по страницам сайта> -->
+      <ul class="main-nav__site-list site-list">
+        <li class="site-list__point">
+          <a class="site-list__item site-list__item-contacts" href="catalog.html">
             Каталог товаров
-          </h1>
-          <ul class="catalog__list">
-            <li class="catalog__item">
-              <figure class="catalog__item-picture">
-                <img class="catalog__item-image" src="./img/photo-hare-mobile@1x.jpg" alt="Вязаный зайчик">
-              </figure>
-              <div>
-                <h2 class="catalog__item-name">
-                  Зайчик-попрыгайчик
-                </h2>
-                <p class="catalog__item-characteristic">
-                  рост 30 см, вес 200 г
-                </p>
-                <p class="catalog__item-price">
-                  1 200 руб.
-                </p>
-              </div>
-            </li>
-            <li class="catalog__item">
-              <figure class="catalog__item-picture">
-                <img class="catalog__item-image" src="./img/photo-bowl-mobile@1x.jpg" alt="Вязаный корзина для белья">
-              </figure>
-              <div>
-                <h2 class="catalog__item-name">
-                  Корзинка для белья
-                </h2>
-                <p class="catalog__item-characteristic">
-                  диаметр 15 см, высота 10 см
-                </p>
-                <p class="catalog__item-price">
-                  690 руб.
-                </p>
-              </div>
-            </li>
-            <li class="catalog__item">
-              <figure class="catalog__item-picture">
-                <img class="catalog__item-image" src="./img/photo-toys-mobile@1x.jpg" alt="Вязаный корзина для игрушек">
-              </figure>
-              <div>
-                <h2 class="catalog__item-name">
-                  Большая корзина для игрушек
-                </h2>
-                <p class="catalog__item-characteristic">
-                  диаметр 30 см, высота 30 см
-                </p>
-                <p class="catalog__item-price">
-                  1 500 руб.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </section>
-        <!-- </список товаров> -->
-        <!-- <Секция с видео производства товаров> -->
-        <section class="production">
-          <h2 class="production__title">
-            Процесс<br>
-            производства
-          </h2>
-          <!-- TODO: сделать правильно( временный вариант) -->
-          <!-- <video class="production__video">
-            <source src="./img/">
-          </video> -->
-          <div class="production__title-wrapper">
-            <img class="production__video" src="./../img/video-mobile@1x.jpg" alt="Превью видео">
-
-            <div class="production__description-wrapper">
-              <p class="production__description">
-                По просьбам наших любимых фолловеров мы сняли для вас
-                подробное видео о том, как появляются наши товары.
-              </p>
-              <button class="production__order button" type="button" name="button">
-                Сделать заказ
-              </button>
-            </div>
-          </div>
-        </section>
-        <!-- </Секция с видео производства товаров> -->
-      </main>
-  </div>
-  <footer class="page-footer">
-    <div class="page-footer__logo-wrapper">
-      <a class="page-footer__logo" href="index.html">
-        <img class="page-footer__logo-image" src="./img/logo-footer.svg" alt="логотип магазина Мишка">
-      </a>
-    </div>
-    <!-- <магазин в соц сетях> -->
-    <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a href="#">
-            <img class="social__inst" src="./img/icon-insta.svg" alt="Магазин Мишка в инстаграмме">
           </a>
         </li>
-        <li class="social__item">
-          <a href="#">
-            <img class="social__fb" src="./img/icon-fb.svg" alt="Магазин Мишка в фейсбуке">
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#">
-            <img class="social__tw" src="./img/icon-twitter.svg" alt="Магазин Мишка в твиттере">
+        <li class="site-list__point">
+          <a class="site-list__item site-list__item-order" href="order.html">
+            Вязание на заказ
           </a>
         </li>
       </ul>
-    </div>
-    <!-- </магазин в соц сетях> -->
-    <div class="page-footer__develop develop">
-      <a class="develop__item" href="https://htmlacademy.ru/intensive/adaptive">
-        Разработано
-      </a>
+      <!-- </меню по страницам сайта> -->
+      <!-- <Меню для  пользователя> -->
+      <ul class="main-nav__users-list users-list">
+        <li class="users-list__point">
+          <a class="users-list__item" href="#">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6"
+              xml:space="preserve">
+              <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z" />
+            </svg>
+            <span class="users-list__search"> Поиск по сайту</span>
+          </a>
+        </li>
+        <li class="users-list__point">
+          <a class="users-list__item" href="basket.html">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849"
+              xml:space="preserve">
+              <path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z" />
+            </svg>
+            Корзина: пока пуста
+          </a>
+        </li>
+      </ul>
+      <!-- </меню для пользователя> -->
+      <!-- <Меню новостей в товарах и продаже> -->
+      <ul class="main-nav__list news-list">
+        <li class="news-list__point">
+          <a class="news-list__item" href="catalog.html">
+            Новые поступление
+          </a>
+        </li>
+        <li class="news-list__point">
+          <a class="news-list__item" href="catalog.html">
+            Распродажа
+          </a>
+        </li>
+      </ul>
+      <!-- </Меню новостей в товарах и продаже> -->
+      <p class="page-header__delivery">
+        <a href="delivery.html">
+          Бесплатная доставка по России
+        </a>
+      </p>
+    </nav>
+  </header>
+  <main class="page-main">
+    <!-- <список товаров > -->
+
+    <!-- TODO: ПРОБЛЕМА С margin , ПОКА НЕ ЗНАЮ КАК РЕШИТЬ -->
+    <section class="catalog">
+      <h1 class="catalog__title">
+        Каталог товаров
+      </h1>
+      <div class="catalog__grid">
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            <img class="catalog__item-image" src="./img/photo-hare-mobile@1x.jpg" alt="Вязаный зайчик">
+            <div class="catalog__wrapper">
+              <h2 class="catalog__item-name">
+                Зайчик-попрыгайчик
+              </h2>
+              <p class="catalog__item-characteristic">
+                рост 30 см, вес 200 г
+              </p>
+              <p class="catalog__item-price">
+                1 200 руб.
+              </p>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <img class="catalog__item-image" src="./img/photo-bowl-mobile@1x.jpg" alt="Вязаный корзина для белья">
+            <div class="catalog__wrapper">
+              <h2 class="catalog__item-name">
+                Корзинка для белья
+              </h2>
+              <p class="catalog__item-characteristic">
+                диаметр 15 см, высота 10 см
+              </p>
+              <p class="catalog__item-price">
+                690 руб.
+              </p>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <img class="catalog__item-image" src="./img/photo-toys-mobile@1x.jpg" alt="Вязаный корзина для игрушек">
+            <div class="catalog__wrapper">
+              <h2 class="catalog__item-name">
+                Большая корзина для игрушек
+              </h2>
+              <p class="catalog__item-characteristic">
+                диаметр 30 см, высота 30 см
+              </p>
+              <p class="catalog__item-price">
+                1 500 руб.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- </список товаров> -->
+    <!-- <Секция с видео производства товаров> -->
+    <section class="production">
+      <div class="production__grid">
+        <h2 class="production__title">
+          Процесс<br>
+          производства
+        </h2>
+        <div class="production__img-wrapper">
+          <img class="production__video" src="./../img/video-mobile@1x.jpg" alt="Превью видео">
+        </div>
+        <div class="production__description-wrapper">
+          <p class="production__description">
+            По просьбам наших любимых фолловеров мы сняли для вас
+            подробное видео о том, как появляются наши товары.
+          </p>
+          <button class="production__order button" type="button" name="button">
+            Сделать заказ
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- </Секция с видео производства товаров> -->
+  </main>
+  </div>
+  <footer class="page-footer">
+    <div class="page-footer__grid">
+      <div class="page-footer__logo-wrapper">
+        <a class="page-footer__logo" href="index.html">
+          <img class="page-footer__logo-image" src="./img/logo-footer.svg" alt="логотип магазина Мишка">
+        </a>
+      </div>
+      <!-- <магазин в соц сетях> -->
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="#">
+              <img class="social__inst" src="./img/icon-insta.svg" alt="Магазин Мишка в инстаграмме">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#">
+              <img class="social__fb" src="./img/icon-fb.svg" alt="Магазин Мишка в фейсбуке">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#">
+              <img class="social__tw" src="./img/icon-twitter.svg" alt="Магазин Мишка в твиттере">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- </магазин в соц сетях> -->
+      <div class="page-footer__develop develop">
+        <a class="develop__item" href="https://htmlacademy.ru/intensive/adaptive">
+          Разработано
+        </a>
+      </div>
     </div>
   </footer>
-  </div>
 </body>
 
 </html>

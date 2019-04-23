@@ -1,13 +1,12 @@
 .catalog {
-  display: flex;
-  flex-direction: column;
-
   &__title {
     @include title();
     background-color: #f1f1f1;
     padding: 70px 0;
     text-align: center;
-    margin: 0 -30px 30px;
+    margin-top: 0;
+    font-size: 27px;
+    line-height: 30px;
   }
 
   &__list {
@@ -19,25 +18,21 @@
   &__item-name {
     @include title(17px, 24px);
     text-align: left;
-    padding-left: 30px;
-    margin-top: 30px;
+    margin: 0;
   }
 
   &__item-characteristic {
     @include text(13px,30px);
     border-bottom: 1px solid #ececec;
     text-align: left;
-    padding-left: 30px;
     padding-bottom: 25px;
   }
 
   &__item-price {
     @include title(15px, 24px);
-    border-bottom: 1px solid #ececec;
     padding-bottom: 25px;
     text-align: left;
-    padding-left: 30px;
-    margin-bottom: 30px;
+    margin: 0;
     position: relative;
   }
 
@@ -52,37 +47,58 @@
     opacity: 0.2;
   }
 
-  &__item-picture {
-    margin: 0;
-  }
-
   &__item {
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
   }
 
   &__item-image {
     width: 100%;
   }
+
+  &__grid {
+    max-width: 320px;
+    padding: 0 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    padding: 27px 28px 0 27px;
+    border: 1px solid #ececec;
+    text-align: left;
+  }
 }
 
 @media (min-width: 768px) {
   .catalog {
+    &__grid {
+      padding: 0 50px;
+      max-width: 768px;
+    }
+
+    &__wrapper {
+      width: 50%;
+    }
+
     &__item {
       flex-direction: row;
       margin-bottom: 55px;
     }
 
     &__title {
-      margin: -45px -50px 90px;
       padding-top: 100px;
       padding-bottom: 75px;
+      font-size: 43px;
+      line-height: 50px;
     }
 
     &__item-price {
       border-top: 1px solid #ececec;
       padding-top: 25px;
-      margin-top: 39vh;
+      margin-top: 20vh;
     }
 
     &__item-characteristic {
@@ -91,23 +107,29 @@
 
     &__item-image {
       height: 335px;
+      width: 65%;
     }
   }
 }
 
 @media (min-width: 1200px) {
   .catalog {
+    &__grid {
+      max-width: 1050px;
+    }
+
     &-title {
       padding: 70px 100%;
     }
 
     &__list {
       flex-direction: row;
+      justify-content: space-between;
     }
 
     &__item {
       flex-direction: column;
-      margin: 0 25px;
+      width: 33%;
     }
 
     &__item-price {
@@ -116,6 +138,14 @@
 
     &__description-wrapper {
       flex-direction: column;
+    }
+
+    &__item-image {
+      width: 100%;
+    }
+
+    &__wrapper {
+      width: auto;
     }
   }
 }

@@ -1,31 +1,58 @@
 .advantages {
   margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
 
-  .advantages__title {
-    @include title();
+  &__grid {
+    max-width: 320px;
+    padding: 0 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
   }
 
-  .advantages__list {
+  &__title {
+    @include title();
+    margin: 0;
+  }
+
+  &__list {
     @include list();
     display: flex;
     flex-direction: column;
   }
 
-  .advantages__item {
+  &__item {
     @include list-point();
+    position: relative;
+    width: 81%;
+  }
+
+  &__item path {
+    fill: #63d1bb;
+  }
+
+  &__item svg {
+    position: absolute;
+    bottom: 55px;
+  }
+
+  &__grid br {
+    display: none;
   }
 }
 
 @media (min-width: 768px) {
   .advantages {
-    .advantages__list {
+    &__grid {
+      padding: 0 50px;
+      max-width: 768px;
+    }
+
+    &__list {
       flex-direction: row;
       flex-wrap: wrap;
     }
 
-    .advantages__item {
+    &__item {
       //Временно
       margin-right: 60px;
       width: 250px;
@@ -35,12 +62,29 @@
 
 @media (min-width: 1200px) {
   .advantages {
-    padding-left: 175px;
+    &__title {
+      font-size: 53px;
+      line-height: 57px;
+    }
 
-    .advantages__item {
+    &__grid {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 0 400px;
+    }
+
+    &__item {
       //Временно
-      margin-right: 60px;
-      width: 300px;
+      width: 50%;
+      margin-right: 0;
+    }
+
+    &__grid br {
+      display: block;
+    }
+
+    &__list {
+      justify-content: space-between;
     }
   }
 }

@@ -1,13 +1,14 @@
 .site-guide {
   background-image: url("./../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: -80px 0;
-  margin-bottom: 30px;
+  background-position: 50% 20%;
   background-size: 488px 320px;
   display: flex;
   flex-direction: column;
+  background-color: #fafafa;
+  margin-bottom: 30px;
 
-  .site-guide__title {
+  &__title {
     font-size: 27px;
     line-height: 30px;
     font-family: "Open Sans", "Tahoma", sans-serif;
@@ -16,35 +17,60 @@
     padding-bottom: 120px;
     padding-top: 75px;
     text-align: center;
-    margin: 0;
+    margin: 0 auto;
   }
 
-  .site-guide__item {
-    padding: 30px 0;
-  }
-
-  .site-guide__links {
+  &__links {
+    display: block;
+    position: relative;
     font-size: 19px;
     line-height: 24px;
     font-family: "Open Sans", "Tahoma", sans-serif;
     font-weight: bold;
     color: #ffffff;
     text-decoration: none;
-    padding: 25px 100px 30px 30px;
+    padding: 25px 100px 30px 50px;
     cursor: pointer;
   }
 
-  .site-guide__item--interior {
+  &__links--interior {
     background-color: #63d1bb;
   }
 
-  .site-guide__item--children {
+  &__links--interior::after {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    right: 34px;
+    top: 23px;
+    background-image: url("./../img/icon-interior.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.2;
+  }
+
+  &__links--children {
     background-color: #56c3b2;
   }
 
-  .site-guide__item-wrapper {
+  &__links--children::after {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    right: 43px;
+    top: 23px;
+    background-image: url("./../img/icon-toy.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.2;
+  }
+
+  &__item-wrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 }
 
@@ -52,21 +78,57 @@
   .site-guide {
     flex-wrap: wrap;
     background-image: url("./../img/hero-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 1%;
+    background-size: 1150px 746px;
 
-    .site-guide__title {
-      max-width: 515px;
+    &__title {
+      width: 550px;
+      padding-top: 153px;
+      padding-bottom: 373px;
+      font-size: 43px;
+      line-height: 50px;
     }
 
-    .site-guide__item--interior {
+    &__title br {
+      display: none;
+    }
+
+    &__item--interior {
       flex-grow: 1;
     }
 
-    .site-guide__item--children {
+    &__item--children {
       flex-grow: 1;
     }
 
-    .site-guide__item-wrapper {
+    &__item-wrapper {
       flex-direction: row;
+      padding: 0 50px;
+      max-width: 668px;
+      margin: 0 auto;
+    }
+
+    &__links {
+      flex-grow: 1;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-guide {
+    &__title {
+      font-size: 53px;
+      line-height: 57px;
+      width: 650px;
+    }
+
+    &__item-wrapper {
+      max-width: 1050px;
+    }
+
+    &__links {
+      min-height: 70px;
     }
   }
 }

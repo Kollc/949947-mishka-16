@@ -1,5 +1,7 @@
 .contacts {
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
 
   &__grid {
     max-width: 320px;
@@ -45,11 +47,22 @@
     margin: 0;
     width: 100%;
   }
+
+  &__grid-button {
+    max-width: 320px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 768px) {
   .contacts {
     &__grid {
+      padding: 0 50px;
+      max-width: 768px;
+    }
+
+    &__grid-button {
       padding: 0 50px;
       max-width: 768px;
       margin: 0 auto;
@@ -97,13 +110,17 @@
 
 @media (min-width: 1200px) {
   .contacts {
-    flex-direction: column;
-    padding-left: 175px;
-    position: relative;
-    margin-bottom: 100px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1050px;
+    padding: 0 50px 0 175px;
+    margin: 0 auto 100px;
 
     &__grid {
-      max-width: 1050px;
+      padding: 0;
+      margin: 0;
+      width: auto;
+      order: -5;
     }
 
     &__write {
@@ -126,7 +143,7 @@
 
     &__title::before {
       left: -115px;
-      top: 60px;
+      top: 20px;
     }
 
     &__img-wrapper {
@@ -135,15 +152,11 @@
     }
 
     &__title {
-      padding-top: 80px;
+      padding-top: 30px;
     }
 
-    &__map {
-      position: absolute;
-      top: 20px;
-      right: 260px;
-      height: 457px;
-      width: 525px;
+    &__grid-button {
+      margin: -55px 0 0;
     }
   }
 }

@@ -14,7 +14,11 @@
   <header class="page-header">
     <nav class="main-nav main-nav--nojs">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="./img/mishka-logo-mobile.svg.png" alt="магазин «Мишка»" width="86" height="35">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="./img/logo-mobile.svg" alt="магазин «Мишка»" width="86" height="35">
+        </picture>
       </a>
       <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
       <!-- <меню по страницам сайта> -->
@@ -76,7 +80,6 @@
   </header>
   <main class="page-main">
     <!-- <список товаров > -->
-
     <!-- TODO: ПРОБЛЕМА С margin , ПОКА НЕ ЗНАЮ КАК РЕШИТЬ -->
     <section class="catalog">
       <h1 class="catalog__title">
@@ -85,7 +88,11 @@
       <div class="catalog__grid">
         <ul class="catalog__list">
           <li class="catalog__item">
-            <img class="catalog__item-image" src="./img/photo-hare-mobile@1x.jpg" alt="Вязаный зайчик">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/photo-hare-desktop@1x.jpg, ./img/photo-hare-desktop@2x.jpg">
+              <source media="(min-width: 768px)" srcset="./img/photo-hare-tablet@1x.jpg, ./img/photo-hare-tablet@2x.jpg">
+              <img class="catalog__item-image" src="./img/photo-hare-mobile@1x.jpg" srcset="./img/photo-hare-mobile@2x.jpg" alt="Вязаный зайчик">
+            </picture>
             <div class="catalog__wrapper">
               <h2 class="catalog__item-name">
                 Зайчик-попрыгайчик
@@ -99,7 +106,11 @@
             </div>
           </li>
           <li class="catalog__item">
-            <img class="catalog__item-image" src="./img/photo-bowl-mobile@1x.jpg" alt="Вязаный корзина для белья">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/photo-bowl-desktop@1x.jpg, ./img/photo-bowl-desktop@2x.jpg">
+              <source media="(min-width: 768px)" srcset="./img/photo-bowl-tablet@1x.jpg, ./img/photo-bowl-tablet@2x.jpg">
+              <img class="catalog__item-image" src="./img/photo-bowl-mobile@1x.jpg" srcset="./img/photo-bowl-mobile@2x.jpg" alt="Вязаный корзина для белья">
+            </picture>
             <div class="catalog__wrapper">
               <h2 class="catalog__item-name">
                 Корзинка для белья
@@ -113,12 +124,16 @@
             </div>
           </li>
           <li class="catalog__item">
-            <img class="catalog__item-image" src="./img/photo-toys-mobile@1x.jpg" alt="Вязаный корзина для игрушек">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/photo-toys-desktop@1x.jpg, ./img/photo-toys-desktop@2x.jpg">
+              <source media="(min-width: 768px)" srcset="./img/photo-toys-tablet@1x.jpg, ./img/photo-toys-tablet@2x.jpg">
+              <img class="catalog__item-image" src="./img/photo-toys-mobile@1x.jpg" srcset="./img/photo-toys-mobile@2x.jpg" alt="Вязаный корзина для игрушек">
+            </picture>
             <div class="catalog__wrapper">
               <h2 class="catalog__item-name">
                 Большая корзина для игрушек
               </h2>
-              <p class="catalog__item-characteristic">
+              <p class="catalog__item-characteristic ">
                 диаметр 30 см, высота 30 см
               </p>
               <p class="catalog__item-price">
@@ -138,7 +153,11 @@
           производства
         </h2>
         <div class="production__img-wrapper">
-          <img class="production__video" src="./img/video-mobile@1x.jpg" alt="Превью видео">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/video-desktop@1x.jpg, ./img/video-desktop@2x.jpg">
+            <source media="(min-width: 768px)" srcset="./img/video-tablet@1x.jpg, ./img/video-tablet@2x.jpg">
+            <img class="production__video" src="./img/video-mobile@1x.jpg" srcset="./img/video-mobile@2x.jpg" alt="Превью видео">
+          </picture>
         </div>
         <div class="production__description-wrapper">
           <p class="production__description">
@@ -158,7 +177,9 @@
     <div class="page-footer__grid">
       <div class="page-footer__logo-wrapper">
         <a class="page-footer__logo" href="index.html">
-          <img class="page-footer__logo-image" src="./img/logo-footer.svg" alt="логотип магазина Мишка">
+          <picture>
+            <img class="page-footer__logo-image" src="./img/logo-footer.svg" alt="логотип магазина Мишка" width="86" height="35">
+          </picture>
         </a>
       </div>
       <!-- <магазин в соц сетях> -->

@@ -107,7 +107,7 @@
 
     &__item-image {
       height: 335px;
-      width: 65%;
+      width: 100%;
     }
   }
 }
@@ -129,11 +129,11 @@
 
     &__item {
       flex-direction: column;
-      width: 33%;
+      width: 30%;
     }
 
     &__item-price {
-      margin-top: 15px;
+      margin-top: auto;
     }
 
     &__description-wrapper {
@@ -142,10 +142,14 @@
 
     &__item-image {
       width: 100%;
+      height: auto;
     }
 
     &__wrapper {
+      height: 100%;
       width: auto;
+      display: flex;
+      flex-direction: column;
     }
   }
 }

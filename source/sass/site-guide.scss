@@ -36,6 +36,15 @@
     cursor: pointer;
   }
 
+  &__links:hover {
+    padding-top: 20px;
+    margin-top: -5px;
+  }
+
+  &__links:active span {
+    opacity: 0.3;
+  }
+
   &__links--interior {
     background-color: #63d1bb;
   }
@@ -50,7 +59,16 @@
     background-image: url("./../img/icon-interior.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    opacity: 0.2;
+    opacity: 0.5;
+  }
+
+  &__links--interior:hover::after {
+    top: 17px;
+    opacity: 0.7;
+  }
+
+  &__links--interior:active::after {
+    opacity: 0.3;
   }
 
   &__links--children {
@@ -67,7 +85,16 @@
     background-image: url("./../img/icon-toy.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    opacity: 0.2;
+    opacity: 0.5;
+  }
+
+  &__links--children:hover::after {
+    top: 17px;
+    opacity: 0.7;
+  }
+
+  &__links--children:active::after {
+    opacity: 0.3;
   }
 
   &__item-wrapper {

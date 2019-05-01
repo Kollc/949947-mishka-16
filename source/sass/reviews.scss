@@ -47,6 +47,15 @@
     @include button();
   }
 
+  &__write:hover {
+    background-color: #444444;
+    color: #ffffff;
+  }
+
+  &__write:active span {
+    opacity: 0.3;
+  }
+
   &__wrapper {
     margin: 0 auto;
     display: flex;
@@ -61,6 +70,15 @@
     width: 130px;
     height: 50px;
     background-position: 50px 12px;
+    cursor: pointer;
+  }
+
+  &__next:hover {
+    opacity: 0.6;
+  }
+
+  &__next:active {
+    opacity: 0.3;
   }
 
   &__wrapper-next {
@@ -76,6 +94,15 @@
     width: 130px;
     height: 50px;
     background-position: 50px 12px;
+    cursor: pointer;
+  }
+
+  &__back:hover {
+    opacity: 0.6;
+  }
+
+  &__back:active {
+    opacity: 0.3;
   }
 
   &__wrapper-back {

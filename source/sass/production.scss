@@ -31,6 +31,15 @@
     width: 100%;
   }
 
+  &__order:hover {
+    background-color: #444444;
+    color: #ffffff;
+  }
+
+  &__order:active span {
+    opacity: 0.3;
+  }
+
   &__description-wrapper {
     display: flex;
     flex-direction: column;

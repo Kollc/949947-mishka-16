@@ -9,6 +9,14 @@
     padding-left: 75px;
   }
 
+  &__item:hover {
+    opacity: 0.6;
+  }
+
+  &__item:active {
+    opacity: 0.3;
+  }
+
   &__point {
     @include point();
   }
@@ -23,7 +31,7 @@
 
     &__item {
       font-size: 15px;
-      padding: 17px 37px 30px 0;
+      padding: 17px 16px 30px 0;
     }
 
     &__item-contacts {
@@ -32,6 +40,7 @@
 
     &__point {
       border: none;
+      padding-right: 15px;
     }
   }
 }

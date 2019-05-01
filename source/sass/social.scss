@@ -3,13 +3,22 @@
   border-bottom: 1px solid #ececec;
   display: flex;
 
-  .social__list {
+  &__list {
     @include list();
     margin: 0 auto;
     display: flex;
   }
 
-  .social__item {
+  &__item {
     margin: 0 20px;
+  }
+
+  &__item:hover svg {
+    fill: #46c1ae;
+  }
+
+  &__item:active svg {
+    fill: #46c1ae;
+    opacity: 0.3;
   }
 }

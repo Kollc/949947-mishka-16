@@ -8,6 +8,14 @@
     padding: 14px 0;
   }
 
+  &__item:hover {
+    opacity: 0.6;
+  }
+
+  &__item:active {
+    opacity: 0.3;
+  }
+
   &__item:last-child {
     border-bottom: 1px solid #ececec;
   }

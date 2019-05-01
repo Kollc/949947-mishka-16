@@ -1,23 +1,56 @@
 .tel {
-  .tel__field {
-    @include border();
+  &__point {
+    position: relative;
+    display: flex;
   }
 
-  .tel__name-field {
-    @include title(17px,16px,#63d1bb);
-    margin-bottom: 30px;
-  }
-
-  .tel__list {
-    @include list();
-  }
-
-  .tel__point {
-    padding-bottom: 15px;
-    border-bottom: 2px solid #000000;
-  }
-
-  .tel__number {
+  &__number {
     @include text(17px,18px);
+    border: none;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #000000;
+    position: relative;
+  }
+
+  &__number:hover {
+    border-color: #62d1ba;
+  }
+
+  &__number:focus {
+    border-color: #62d1ba;
+  }
+
+  &__number:hover + svg {
+    fill: #62d1ba;
+    opacity: 1;
+  }
+
+  &__number:focus + svg {
+    fill: #62d1ba;
+    opacity: 1;
+  }
+
+  &__point svg {
+    opacity: 0.3;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .tel {
+    width: 100%;
+
+    &__number {
+      width: 100%;
+      background-color: #f1f1f1;
+    }
+
+    &__point {
+      width: 100%;
+    }
   }
 }

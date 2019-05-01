@@ -8,6 +8,7 @@
   padding: 27px 0;
   display: inline-block;
   cursor: pointer;
+  width: 100%;
 }
 
 @mixin title($size:25px , $line:30px, $color:#000000) {

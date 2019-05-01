@@ -1,22 +1,68 @@
 .type {
-  .type__field {
-    @include border();
-  }
-
-  .type__name-field {
-    @include title(17px,16px,#63d1bb);
-    margin-bottom: 30px;
-  }
-
-  .type__list {
-    @include list();
-  }
-
-  .type__point {
+  &__point {
     margin-bottom: 20px;
   }
 
-  .type__name {
+  &__name {
     @include title(17px,18px);
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__name-select {
+    display: block;
+    order: 1;
+  }
+
+  &__name::after {
+    content: "";
+    min-width: 40px;
+    height: 40px;
+    border: 2px solid #444444;
+    margin-right: 23px;
+    border-radius: 50%;
+  }
+
+  &__name:hover::after {
+    border-color: #63d1bb;
+  }
+
+  &__name:focus::before {
+    border-color: #63d1bb;
+  }
+
+  &__name:active::before {
+    border-color: #63d1bb;
+  }
+
+  input:checked + &__name::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 14px;
+    background-color: #63d1bb;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .type {
+    &__name::after {
+      width: 52px;
+      height: 52px;
+    }
+
+    input:checked + &__name::before {
+      top: 17px;
+      left: 17px;
+      width: 22px;
+      height: 22px;
+    }
+
+    &__name {
+      font-size: 19px;
+    }
   }
 }

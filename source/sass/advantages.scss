@@ -27,13 +27,10 @@
     width: 81%;
   }
 
-  &__item path {
-    fill: #63d1bb;
-  }
-
   &__item svg {
     position: absolute;
     bottom: 55px;
+    fill: #63d1bb;
   }
 
   &__grid br {

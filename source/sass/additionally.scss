@@ -1,26 +1,16 @@
 .additionally {
-  .additionally__field {
-    @include border();
+  width: 87%;
+  min-height: 142px;
+  padding: 15px;
+
+  @include text(17px, 18px);
+  border: 2px solid #444444;
+
+  &:hover {
+    border-color: #62d1ba;
   }
 
-  .additionally__name-field {
-    @include title(17px,16px,#63d1bb);
-    margin-bottom: 30px;
-  }
-
-  .additionally__list {
-    @include list();
-  }
-
-  .additionally__point {
-    padding-bottom: 15px;
-  }
-
-  .additionally__number {
-    @include text(17px,18px);
-  }
-
-  .additionally-area {
-    border: 2px solid #000000;
+  &:focus {
+    border-color: #62d1ba;
   }
 }

@@ -1,35 +1,60 @@
 .initials {
-  .initials__field {
-    @include border();
-  }
-
-  .initials__name-field {
-    @include title(17px,16px,#63d1bb);
-    margin-bottom: 30px;
-  }
-
-  .initials__list {
-    @include list();
-  }
-
-  .initials__name {
+  &__name {
     @include title(17px,18px);
   }
 
-  .initials__point {
-    padding-bottom: 20px;
+  &__point {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name-input {
+    @include text(17px,18px);
+    padding: 16px 0;
+    border: none;
     border-bottom: 2px solid #000000;
   }
 
-  .initials__names {
+  &__name-input:hover {
+    border-color: #62d1ba;
+  }
+
+  &__name-input:focus {
+    border-color: #62d1ba;
+  }
+
+  &__surname {
     @include text(17px,18px);
   }
 
-  .initials__surname {
+  &__patronymic {
     @include text(17px,18px);
   }
+}
 
-  .initials__patronymic {
-    @include text(17px,18px);
+@media (min-width: 768px) {
+  .initials {
+    width: 100%;
+
+    &__point {
+      width: 100%;
+      flex-direction: row;
+      border: none;
+      align-items: center;
+    }
+
+    &__name-input {
+      border-bottom: 2px solid #000000;
+      width: 100%;
+      padding-top: 11px;
+      padding-left: 16px;
+      padding-bottom: 13px;
+    }
+
+    &__name {
+      margin-right: 25px;
+      font-size: 19px;
+    }
   }
 }

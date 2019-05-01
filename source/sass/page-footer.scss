@@ -14,6 +14,15 @@
     display: none;
     margin: 30px auto;
   }
+
+  &__logo:hover svg {
+    fill: #46c1ae;
+  }
+
+  &__logo:active {
+    opacity: 0.3;
+    fill: #46c1ae;
+  }
 }
 
 @media (min-width: 768px) {

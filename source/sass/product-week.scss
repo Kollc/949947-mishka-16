@@ -69,6 +69,15 @@
     margin-top: 28px;
   }
 
+  &__order:hover {
+    background-color: #444444;
+    color: #ffffff;
+  }
+
+  &__order:active span {
+    opacity: 0.3;
+  }
+
   &__imagen-wrapper {
     margin: 0 auto;
   }

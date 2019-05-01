@@ -1,23 +1,57 @@
 .email {
-  .email__field {
-    @include border();
-  }
-
-  .email__name-field {
-    @include title(17px,16px,#63d1bb);
-    margin-bottom: 30px;
-  }
-
-  .email__list {
-    @include list();
-  }
-
-  .email__point {
+  &__point {
     padding-bottom: 15px;
-    border-bottom: 2px solid #000000;
+    position: relative;
+    display: flex;
   }
 
-  .email__number {
+  &__text {
     @include text(17px,18px);
+    border: none;
+    border-bottom: 2px solid #000000;
+    position: relative;
+  }
+
+  &__text:hover {
+    border-color: #62d1ba;
+  }
+
+  &__text:focus {
+    border-color: #62d1ba;
+  }
+
+  &__text:hover + svg {
+    fill: #62d1ba;
+    opacity: 1;
+  }
+
+  &__text:focus + svg {
+    fill: #62d1ba;
+    opacity: 1;
+  }
+
+  &__point svg {
+    opacity: 0.3;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .email {
+    width: 100%;
+
+    &__text {
+      width: 100%;
+      background-color: #f1f1f1;
+    }
+
+    &__point {
+      width: 100%;
+    }
   }
 }

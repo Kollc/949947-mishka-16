@@ -37,10 +37,29 @@
     @include button();
   }
 
+  &__write:hover {
+    background-color: #444444;
+    color: #ffffff;
+  }
+
+  &__write:active span {
+    opacity: 0.3;
+  }
+
   &__links {
     @include text(15px, 30px);
     padding-bottom: 5px;
     border-bottom: 1px solid #62d1ba;
+    text-decoration: none;
+  }
+
+  &__links:hover {
+    color: #46c1ae;
+  }
+
+  &__links:active {
+    opacity: 0.3;
+    color: #46c1ae;
   }
 
   &__map {

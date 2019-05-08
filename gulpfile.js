@@ -99,15 +99,15 @@ gulp.task("server", function() {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html" ,"refresh"));
+  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
-gulp.task("refresh", function (done) {
- server.reload();
- done();
+gulp.task("refresh", function(done) {
+  server.reload();
+  done();
 });
 
-gulp.task("build", gulp.series("clean","copy","css","sprite","html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
 gulp.task("img", gulp.series("images", "webp"));
 gulp.task("start", gulp.series("build", "server"));

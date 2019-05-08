@@ -1,5 +1,6 @@
 .develop {
   display: flex;
+  margin-right: 30px;
 
   &__item {
     @include list-point(19px ,18px);
@@ -15,11 +16,12 @@
     content: "";
     position: absolute;
     width: 35px;
-    height: 35px;
+    height: 40px;
     right: -30px;
     top: -10px;
     background-image: url("./../img/htmlacademy.svg");
     background-repeat: no-repeat;
+    background-size: 120%;
   }
 
   &__item:active {
@@ -30,5 +32,9 @@
 @media (min-width: 768px) {
   .develop {
     margin-top: 30px;
+
+    &__item {
+      margin-top: 32px;
+    }
   }
 }

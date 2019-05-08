@@ -1,4 +1,6 @@
 .email {
+  margin-top: 2px;
+
   &__point {
     padding-bottom: 15px;
     position: relative;
@@ -10,6 +12,8 @@
     border: none;
     border-bottom: 2px solid #000000;
     position: relative;
+    padding-bottom: 17px;
+    width: 100%;
   }
 
   &__text:hover {
@@ -36,8 +40,8 @@
 
   &__icon {
     position: absolute;
-    right: 0;
-    bottom: 15px;
+    right: 4px;
+    bottom: 24px;
   }
 }
 
@@ -46,12 +50,21 @@
     width: 100%;
 
     &__text {
-      width: 100%;
+      width: 93%;
       background-color: #f1f1f1;
+      padding-left: 17px;
+      font-size: 19px;
+      padding-bottom: 10px;
     }
 
     &__point {
       width: 100%;
+      margin-top: 15px;
+      margin-left: 20px;
+    }
+
+    &__icon {
+      right: 54px;
     }
   }
 }

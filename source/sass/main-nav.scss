@@ -9,6 +9,14 @@
     margin: 0 auto;
   }
 
+  &__grid {
+    max-width: 320px;
+    padding: 0 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
   .main-nav--close .main-nav__toggle {
     position: absolute;
     top: -50px;
@@ -50,7 +58,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 40px;
     max-width: 668px;
     margin: 0 auto;
   }

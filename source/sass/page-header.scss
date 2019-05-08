@@ -56,6 +56,7 @@
     &__logo-image {
       width: 115px;
       height: auto;
+      padding-top: 11px;
     }
 
     &__delivery {
@@ -72,19 +73,22 @@
 
 @media (min-width: 1200px) {
   .page-header {
+    &__logo-image {
+      padding-top: 6px;
+      width: 155px;
+      height: auto;
+    }
+
     &__delivery {
       order: 3;
+      margin-top: 8px;
     }
 
     &__logo {
       width: 155px;
       height: auto;
-      margin: 0;
-    }
-
-    &__logo-image {
-      width: 155px;
-      height: auto;
+      margin: 0 74px 0 0;
+      padding: 0;
     }
   }
 }

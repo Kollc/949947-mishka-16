@@ -1,5 +1,5 @@
 .social {
-  margin: 30px auto;
+  margin: 30px auto 46px;
   border-bottom: 1px solid #ececec;
   display: flex;
 
@@ -20,5 +20,18 @@
   &__item:active svg {
     fill: #46c1ae;
     opacity: 0.3;
+  }
+}
+
+@media (min-width: 768px) {
+  .social {
+    margin-top: 62px;
+    margin-left: 142px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .social {
+    margin-left: 332px;
   }
 }

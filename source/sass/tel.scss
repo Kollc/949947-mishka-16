@@ -1,15 +1,19 @@
 .tel {
+  margin-bottom: 32px;
+  margin-top: 0;
+
   &__point {
     position: relative;
     display: flex;
   }
 
   &__number {
-    @include text(17px,18px);
+    @include text(19px,18px);
     border: none;
-    padding-bottom: 12px;
     border-bottom: 2px solid #000000;
     position: relative;
+    padding-bottom: 11px;
+    width: 100%;
   }
 
   &__number:hover {
@@ -36,21 +40,44 @@
 
   &__icon {
     position: absolute;
-    right: 0;
+    right: 8px;
   }
 }
 
 @media (min-width: 768px) {
   .tel {
     width: 100%;
+    margin-bottom: 20px;
 
     &__number {
-      width: 100%;
+      width: 93%;
       background-color: #f1f1f1;
+      padding-left: 16px;
+      padding-bottom: 13px;
+    }
+
+    &__icon {
+      right: 47px;
     }
 
     &__point {
       width: 100%;
+      padding-top: 12px;
+      margin-left: 17px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .tel {
+    &__number {
+      width: 89%;
+      padding-top: 8px;
+    }
+
+    &__icon {
+      right: 58px;
+      top: 19px;
     }
   }
 }

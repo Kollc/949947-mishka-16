@@ -2,9 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  flex-direction: column;
+  margin-top: 4px;
+  margin-bottom: 11px;
 
   &__point {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 
   &__name {
@@ -16,10 +19,10 @@
 
   &__name::before {
     content: "";
-    width: 40px;
-    height: 40px;
+    width: 37px;
+    height: 38px;
     border: 2px solid #444444;
-    margin-right: 23px;
+    margin-right: 20px;
   }
 
   &__name:hover::before {
@@ -48,6 +51,10 @@
 
 @media (min-width: 768px) {
   .color {
+    margin-left: 43px;
+    margin-top: 0;
+    flex-direction: row;
+
     &__point {
       width: 48%;
     }
@@ -61,6 +68,7 @@
     &__name::before {
       width: 52px;
       height: 52px;
+      margin-right: 27px;
     }
 
     input:checked + &__name::after {
@@ -78,8 +86,11 @@
 
 @media (min-width: 1200px) {
   .color {
+    margin-left: 0;
+
     &__point {
       width: 30%;
+      padding-right: 5px;
     }
   }
 }

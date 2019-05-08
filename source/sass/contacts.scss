@@ -5,7 +5,7 @@
 
   &__grid {
     max-width: 320px;
-    padding: 0 30px;
+    padding: 0 20px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -14,6 +14,9 @@
   &__title {
     @include title();
     position: relative;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    font-size: 19px;
   }
 
   &__list {
@@ -24,11 +27,11 @@
   }
 
   &__value {
-    padding-bottom: 30px;
+    padding-bottom: 27px;
   }
 
   &__field {
-    padding-right: 30px;
+    padding-right: 25px;
     vertical-align: top;
     padding-bottom: 30px;
   }
@@ -69,26 +72,33 @@
 
   &__grid-button {
     max-width: 320px;
-    padding: 0 30px;
-    margin: 0 auto;
+    padding: 0 20px;
   }
 }
 
 @media (min-width: 768px) {
   .contacts {
+    margin-bottom: 4px;
+    justify-content: space-between;
+
+    &__field {
+      padding-right: 20px;
+    }
+
     &__grid {
-      padding: 0 50px;
+      padding: 0 40px;
       max-width: 768px;
     }
 
     &__grid-button {
-      padding: 0 50px;
+      padding: 22px 40px;
       max-width: 768px;
       margin: 0 auto;
     }
 
     &__write {
       margin: 30px auto;
+      width: 230px;
     }
 
     &__list tbody {
@@ -99,12 +109,16 @@
       display: none;
     }
 
+    &__value {
+      padding-top: 0;
+    }
+
     &__string {
-      width: 45%;
+      width: 49.5%;
     }
 
     &__title {
-      margin-bottom: 65px;
+      margin-bottom: 47px;
       font-size: 43px;
       line-height: 50px;
     }
@@ -116,13 +130,23 @@
       height: 85px;
       background-image: url("./../img/icon-flag.svg");
       background-repeat: no-repeat;
-      top: -5px;
-      right: 0;
+      top: -16px;
+      right: 5px;
     }
 
     &__img-wrapper {
       display: flex;
       flex-direction: column;
+    }
+
+    &__list {
+      font-size: 17px;
+      padding-bottom: 20px;
+    }
+
+    &__links {
+      font-size: 17px;
+      padding-bottom: 1px;
     }
   }
 }
@@ -132,11 +156,18 @@
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 1050px;
-    padding: 0 50px 0 175px;
-    margin: 0 auto 100px;
+    padding: 0 50px;
+    margin: 0 auto 84px;
+
+    &__title {
+      font-size: 53px;
+      line-height: 57px;
+      padding-top: 35px;
+      margin-bottom: 46px;
+    }
 
     &__grid {
-      padding: 0;
+      padding: 0 0 0 170px;
       margin: 0;
       width: auto;
       order: -5;
@@ -152,17 +183,13 @@
       display: table-row-group;
     }
 
-    &__list {
-      width: 400px;
-    }
-
     &__value {
       width: 200px;
     }
 
     &__title::before {
-      left: -115px;
-      top: 20px;
+      left: -107px;
+      top: 27px;
     }
 
     &__img-wrapper {
@@ -170,12 +197,8 @@
       flex-direction: row;
     }
 
-    &__title {
-      padding-top: 30px;
-    }
-
     &__grid-button {
-      margin: -55px 0 0;
+      margin: -78px 136px 0;
     }
   }
 }

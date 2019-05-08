@@ -10,12 +10,12 @@
   }
 
   &__list {
-    @include list();
+    padding: 0;
+    list-style: none;
   }
 
   &__field {
     padding: 0;
-    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
   }
@@ -26,7 +26,7 @@
 
     @include title(17px,16px,#63d1bb);
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   &__name-field::after {
@@ -39,6 +39,7 @@
 
   &__order {
     @include button();
+    margin-top: 18px;
   }
 
   &__order:hover {
@@ -74,8 +75,8 @@
 @media (min-width: 768px) {
   .setting {
     &__name-field {
-      margin-right: 130px;
-      padding-top: 17px;
+      margin-right: 78px;
+      padding-top: 20px;
       width: 88px;
     }
 
@@ -84,7 +85,7 @@
     }
 
     &__button-wrapper {
-      margin-top: 53px;
+      margin-top: 42px;
       flex-direction: row-reverse;
       justify-content: space-between;
       font-size: 17px;
@@ -100,13 +101,19 @@
     &__name-field::after {
       display: none;
     }
+
+    &__order {
+      width: 230px;
+      height: 52px;
+      margin-top: 9px;
+    }
   }
 }
 
 @media (min-width: 1200px) {
   .setting {
     &__name-field {
-      margin-right: auto;
+      margin-right: 27px;
     }
 
     &__list {
@@ -114,13 +121,29 @@
     }
 
     &__field {
-      padding-right: 175px;
-      padding-left: 112px;
+      padding-right: 126px;
+      padding-left: 60px;
     }
 
     &__button-wrapper {
-      padding-right: 175px;
-      padding-left: 192px;
+      padding-right: 174px;
+      padding-left: 174px;
+    }
+
+    &__name-tel {
+      padding-top: 26px;
+      margin-right: 7px;
+    }
+
+    &__name-email {
+      padding-top: 23px;
+      margin-right: 7px;
+    }
+
+    &__order {
+      width: 230px;
+      height: 52px;
+      margin-top: 6px;
     }
   }
 }

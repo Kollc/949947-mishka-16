@@ -1,4 +1,6 @@
 .order {
+  margin-bottom: 55px;
+
   &__title {
     @include title(27px, 30px);
     background-color: #f1f1f1;
@@ -9,7 +11,7 @@
 
   &__instruction {
     @include text(13px,24px);
-    margin: 0 0 30px;
+    margin: 29px 0 25px;
   }
 
   &__form {
@@ -28,15 +30,18 @@
 
 @media (min-width: 768px) {
   .order {
+    margin-bottom: 47px;
+
     &__indents {
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding-top: 55px;
+      padding-bottom: 19px;
     }
 
     &__decor-color {
       background-color: #f1f1f1;
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding-top: 49px;
+      padding-bottom: 19px;
+      margin-bottom: 46px;
     }
 
     &__title {
@@ -47,15 +52,14 @@
     }
 
     &__instruction {
-      padding-top: 50px;
+      padding-top: 60px;
       font-size: 17px;
       line-height: 30px;
-      padding-bottom: 50px;
       margin: 0;
     }
 
     &__support-decor {
-      margin-top: -22px;
+      margin-top: -11px;
     }
 
     &__support-decor::before {
@@ -80,6 +84,24 @@
 
 @media (min-width: 1200px) {
   .order {
+    margin-bottom: 44px;
+
+    &__support-decor {
+      margin-top: -24px;
+    }
+
+    &__support-decor::before {
+      height: 37px;
+      background-position: 50% 50%;
+      background-size: 1150px 100%;
+    }
+
+    &__title {
+      font-size: 53px;
+      line-height: 57px;
+      padding-bottom: 107px;
+    }
+
     &__grid {
       max-width: 1050px;
       flex-direction: column;
@@ -87,7 +109,20 @@
     }
 
     &__instruction {
-      padding: 102px 175px 0;
+      padding: 101px 175px 0;
+    }
+
+    &__indents-initials {
+      padding-top: 30px;
+      padding-bottom: 25px;
+    }
+
+    &__indents-area {
+      padding-top: 29px;
+    }
+
+    &__decor-color {
+      margin-bottom: 16px;
     }
   }
 }

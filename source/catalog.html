@@ -4,7 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка-Каталог</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="preload" href="./fonts/opensans.woff" as="font" crossoring="anonumous">
+  <link rel="preload" href="./fonts/opensans.woff2" as="font" crossoring="anonumous">
+  <link rel="preload" href="./fonts/opensansbold.woff" as="font" crossoring="anonumous">
+  <link rel="preload" href="./fonts/opensansbold.woff2" as="font" crossoring="anonumous">
   <link rel="stylesheet" href="./css/style.min.css">
   <link rel="stylesheet" href="./css/normalize.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -114,7 +117,7 @@
                   <p class="catalog__item-price">
                     1 200 руб.
                   </p>
-                  <a class="catalog__basket-links" href="#">
+                  <a class="catalog__basket-links catalog__basket-links--1" href="#">
                     <svg class="catalog__icon-basket" width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
@@ -143,7 +146,7 @@
                   <p class="catalog__item-price">
                     690 руб.
                   </p>
-                  <a class="catalog__basket-links" href="#">
+                  <a class="catalog__basket-links catalog__basket-links--2" href="#">
                     <svg class="catalog__icon-basket" width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
@@ -172,7 +175,7 @@
                   <p class="catalog__item-price">
                     1 500 руб.
                   </p>
-                  <a class="catalog__basket-links" href="#">
+                  <a class="catalog__basket-links catalog__basket-links--3" href="#">
                     <svg class="catalog__icon-basket" width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
@@ -264,6 +267,33 @@
       </div>
     </div>
   </footer>
+  <!-- modul -->
+  <div class="modal-overlay"></div>
+  <div class="modal">
+    <h2 class="modal__title">
+      Добавить в корзину
+    </h2>
+    <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+      <span class="modal__form-text">
+        Выберите размер:
+      </span>
+      <div class="modal__form-controls">
+        <input class="modal__input" type="checkbox" id="s-size" name="s-size">
+        <label class="modal__label" for="s-size">S</label>
+        <input class="modal__input" type="checkbox" id="m-size" name="m-size">
+        <label class="modal__label" for="m-size">M</label>
+        <input class="modal__input" type="checkbox" id="l-size" name="l-size">
+        <label class="modal__label" for="l-size">L</label>
+      </div>
+      <button class="modal__button" type="submit" title="Добавить в корзину">
+        <span>
+          Добавить
+        </span>
+      </button>
+    </form>
+  </div>
+  <!--/ modul -->
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

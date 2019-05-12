@@ -49,6 +49,8 @@
   "dependencies": {
     "cwebp": "^2.0.3",
     "del": "^4.1.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-uglify": "^3.0.2",
     "webp-converter": "^2.2.2"
   }
 }

@@ -31,14 +31,10 @@
     margin-bottom: 0;
   }
 
-  &__item svg {
+  &__item img {
     position: absolute;
     bottom: 57px;
     fill: #63d1bb;
-  }
-
-  &__grid br {
-    display: none;
   }
 }
 
@@ -46,19 +42,33 @@
   .advantages {
     margin-bottom: 32px;
 
-    &__item:last-child {
-      margin-bottom: 110px;
+    &__item--ecology {
+      order: -3;
+    }
+
+    &__item--style {
+      order: -1;
+    }
+
+    &__item--related {
+      order: -2;
+    }
+
+    &__item--support {
+      order: -1;
     }
 
     &__grid {
-      padding: 0 40px;
+      padding: 0 50px;
       max-width: 768px;
     }
 
     &__title {
-      margin-bottom: 102px;
       font-size: 43px;
       line-height: 50px;
+      padding: 0 45px;
+      max-width: 768px;
+      margin: 0 auto 5px;
     }
 
     &__list {
@@ -68,11 +78,12 @@
 
     &__item {
       //Временно
-      margin-right: 84px;
-      margin-bottom: 110px;
-      width: 250px;
+      margin-right: 34px;
+      margin-bottom: 14px;
+      width: 300px;
       font-size: 20px;
       line-height: 22px;
+      margin-top: 98px;
     }
   }
 }
@@ -85,19 +96,19 @@
       font-size: 53px;
       line-height: 57px;
       padding-left: 105px;
+      margin: 2px auto;
     }
 
     &__grid {
       max-width: 1050px;
       margin: 0 auto;
-      padding: 0 291px;
+      padding: 0 300px;
     }
 
     &__item {
       //Временно
       width: 38%;
       margin-right: 0;
-      margin-bottom: 110px;
     }
 
     &__grid br {

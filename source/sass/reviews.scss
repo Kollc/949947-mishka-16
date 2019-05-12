@@ -12,7 +12,7 @@
 
   &__grid {
     max-width: 320px;
-    padding: 0 20px;
+    padding: 0 30px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -70,7 +70,7 @@
     background-color: #ffffff;
     width: 135px;
     height: 50px;
-    background-position: 39px 5px;
+    background-position: 56px 13px;
     cursor: pointer;
   }
 
@@ -94,7 +94,7 @@
     background-color: #ffffff;
     width: 130px;
     height: 50px;
-    background-position: 31px 5px;
+    background-position: 56px 13px;
     cursor: pointer;
   }
 
@@ -121,22 +121,23 @@
   .reviews {
     padding-bottom: 26px;
 
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("./../img/review@2x.jpg");
+    }
+    background-image: url("./../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 39px;
+    background-size: 349px 457px;
+
     &::after {
       height: 17px;
       background-size: 768px 100%;
     }
 
     &__grid {
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("./../img/review@2x.jpg");
-      }
       flex-wrap: wrap;
-      background-image: url("./../img/review@1x.jpg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      background-size: 342px 463px;
       max-width: 768px;
-      padding: 0 40px 10px;
+      padding: 118px 50px 7px;
     }
 
     &__wrapper {
@@ -199,6 +200,8 @@
   .reviews {
     padding-top: 65px;
     padding-bottom: 71px;
+    background-position: 234px 78px;
+    background-size: 349px 457px;
 
     &::after {
       width: 1050px;
@@ -212,6 +215,7 @@
       font-size: 17px;
       margin-left: 5px;
       margin-bottom: 44px;
+      padding-right: 100px;
     }
 
     &__grid {
@@ -222,6 +226,7 @@
       padding-right: 50px;
       padding-bottom: 60px;
       margin-bottom: 64px;
+      padding-top: 94px;
     }
 
     &__write {

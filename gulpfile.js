@@ -19,6 +19,10 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 
+var htmlmin = require("gulp-htmlmin");
+var jsmin = require("gulp-uglify");
+
+
 
 gulp.task("clean", function() {
   return del("build");
@@ -79,6 +83,22 @@ gulp.task("images", function() {
     .pipe(gulp.dest("build/img"));
 });
 
+gulp.task("jsmin", function() {
+  return gulp.src("source/js/*.js")
+    .pipe(plumber())
+    .pipe(jsmin())
+    .pipe(gulp.dest("build/js"))
+    .pipe(server.stream());
+});
+// QUESTION: this code delet sprite.svg
+// gulp.task("htmlmin", function() {
+//   // return gulp.src("source/*.html")
+//   //   .pipe(plumber())
+//   //   .pipe(htmlmin())
+//   //   .pipe(gulp.dest("build"))
+//   //   .pipe(server.stream());
+// });
+
 
 gulp.task("css", function() {
   return gulp.src("source/sass/style.scss")
@@ -108,6 +128,6 @@ gulp.task("refresh", function(done) {
   done();
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "jsmin"));
 gulp.task("img", gulp.series("images", "webp"));
 gulp.task("start", gulp.series("build", "server"));

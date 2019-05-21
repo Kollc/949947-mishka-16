@@ -11,6 +11,16 @@ var open = document.querySelector('.main-nav__toggle');
 var site_list = document.querySelector('.main-nav__site-list');
 var users_list = document.querySelector('.main-nav__users-list');
 
+
+var mapContainer = document.querySelector('.contacts__map-box');
+var img_box = document.querySelector('.contacts__img-box');
+
+// mapContainer.classList.add('visually-hidden');
+
+users_list.classList.remove('main-nav__users-list--nojs');
+site_list.classList.remove('main-nav__site-list--nojs');
+open.classList.remove('main-nav__toggle--nojs');
+
 if (open) {
   open.addEventListener('click', function(event) {
     event.preventDefault();
@@ -110,4 +120,25 @@ if (basket_links_3) {
       overlay.classList.remove('modal-overlay--show');
     }
   });
+}
+
+if (mapContainer) {
+  window.onload = function() {
+    var mapOptions = {
+      zoom: 16,
+      center: new google.maps.LatLng(59.9369, 30.3218)
+    }
+    var map = new google.maps.Map(mapContainer, mapOptions);
+    var image = {
+      url: "./../img/icon-map-pin.svg",
+      scaledSize: new google.maps.Size(100, 100)
+    }
+    var myLatLng = new google.maps.LatLng(59.9363, 30.3217);
+    var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      optimized: false,
+      icon: image
+    });
+  }
 }

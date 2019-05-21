@@ -39,13 +39,13 @@
 
   &__inst {
     @include text(17px,30px);
-    margin-bottom: 37px;
+    margin-bottom: 27px;
     margin-top: 5px;
   }
 
   &__write {
     @include button();
-    margin-top: 27px;
+    margin-top: 36px;
   }
 
   &__write:hover {
@@ -68,9 +68,9 @@
     background-image: url("./../img/left.svg");
     background-repeat: no-repeat;
     background-color: #ffffff;
-    width: 135px;
+    width: 122px;
     height: 50px;
-    background-position: 56px 13px;
+    background-position: 37px 15px;
     cursor: pointer;
   }
 
@@ -92,9 +92,9 @@
     background-image: url("./../img/right.svg");
     background-repeat: no-repeat;
     background-color: #ffffff;
-    width: 130px;
+    width: 122px;
     height: 50px;
-    background-position: 56px 13px;
+    background-position: 39px 16px;
     cursor: pointer;
   }
 
@@ -115,12 +115,14 @@
     display: flex;
     flex-direction: column;
   }
-}
 
+  &__write {
+    margin-top: 36px;
+  }
+}
 @media (min-width: 768px) {
   .reviews {
     padding-bottom: 26px;
-
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("./../img/review@2x.jpg");
     }
@@ -137,7 +139,7 @@
     &__grid {
       flex-wrap: wrap;
       max-width: 768px;
-      padding: 118px 50px 7px;
+      padding: 79px 50px 13px;
     }
 
     &__wrapper {
@@ -195,10 +197,9 @@
     }
   }
 }
-
 @media (min-width: 1200px) {
   .reviews {
-    padding-top: 65px;
+    padding-top: 121px;
     padding-bottom: 71px;
     background-position: 234px 78px;
     background-size: 349px 457px;
@@ -222,11 +223,7 @@
       margin: 0 auto;
       background-position: 50px 0;
       max-width: 1150px;
-      padding-left: 220px;
-      padding-right: 50px;
-      padding-bottom: 60px;
-      margin-bottom: 64px;
-      padding-top: 94px;
+      padding: 0 50px 133px 220px;
     }
 
     &__write {

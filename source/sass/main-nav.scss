@@ -33,10 +33,18 @@
     display: block;
   }
 
+  &__site-list--nojs {
+    display: block;
+  }
+
+  &__users-list--nojs {
+    display: block;
+  }
+
   &__toggle {
     position: absolute;
-    top: 39px;
-    right: 39px;
+    top: 32px;
+    right: 31px;
     z-index: 2;
     display: block;
     width: 21px;
@@ -46,6 +54,10 @@
     border: none;
     background-image: url("./../img/icon-menu-open.svg");
     background-repeat: no-repeat;
+  }
+
+  &__toggle--nojs {
+    display: none;
   }
 
   &__toggle-open {

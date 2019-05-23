@@ -7,6 +7,7 @@
     @include menu();
     text-align: left;
     padding-left: 24px;
+    margin: 0;
   }
 
   &__item:hover {

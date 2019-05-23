@@ -18,7 +18,7 @@
     font-weight: bold;
     color: #010000;
     padding-bottom: 120px;
-    padding-top: 75px;
+    padding-top: 68px;
     text-align: center;
     margin: 0 auto;
   }
@@ -54,7 +54,7 @@
     position: absolute;
     width: 43px;
     height: 65px;
-    right: 26px;
+    right: 32px;
     top: 24px;
     background-image: url("./../img/icon-interior.svg");
     background-repeat: no-repeat;
@@ -80,7 +80,7 @@
     position: absolute;
     width: 65px;
     height: 65px;
-    right: 14px;
+    right: 20px;
     top: 22px;
     background-image: url("./../img/icon-toy.svg");
     background-repeat: no-repeat;
@@ -148,6 +148,16 @@
       line-height: 28px;
       padding: 29px 100px 45px 40px;
     }
+
+    &__links--children::after {
+      right: 28px;
+      top: 30px;
+    }
+
+    &__links--interior::after {
+      right: 34px;
+      top: 29px;
+    }
   }
 }
 
@@ -174,6 +184,11 @@
     &__links {
       min-height: 70px;
       padding: 28px 100px 34px 37px;
+    }
+
+    &__links--children::after {
+      right: 34px;
+      top: 29px;
     }
   }
 }

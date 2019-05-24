@@ -1,39 +1,39 @@
 .initials {
   margin-top: 10px;
   margin-bottom: 10px;
+}
 
-  &__name {
-    @include title(17px,18px);
-  }
+.initials__name {
+  @include title(17px,18px);
+}
 
-  &__point {
-    margin-bottom: 22px;
-    display: flex;
-    flex-direction: column;
-  }
+.initials__point {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+}
 
-  &__name-input {
-    @include text(17px,18px);
-    padding: 16px 0;
-    border: none;
-    border-bottom: 2px solid #000000;
-  }
+.initials__name-input {
+  @include text(17px,18px);
+  padding: 16px 0;
+  border: none;
+  border-bottom: 2px solid #000000;
+}
 
-  &__name-input:hover {
-    border-color: #62d1ba;
-  }
+.initials__name-input:hover {
+  border-color: #62d1ba;
+}
 
-  &__name-input:focus {
-    border-color: #62d1ba;
-  }
+.initials__name-input:focus {
+  border-color: #62d1ba;
+}
 
-  &__surname {
-    @include text(17px,18px);
-  }
+.initials__surname {
+  @include text(17px,18px);
+}
 
-  &__patronymic {
-    @include text(17px,18px);
-  }
+.initials__patronymic {
+  @include text(17px,18px);
 }
 
 @media (min-width: 768px) {
@@ -42,44 +42,44 @@
     margin-left: 23px;
     width: 100%;
     margin-bottom: 30px;
+  }
 
-    &__point {
-      width: 100%;
-      flex-direction: row;
-      border: none;
-      align-items: center;
-      margin-bottom: 20px;
-    }
+  .initials__point {
+    width: 100%;
+    flex-direction: row;
+    border: none;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 
-    &__name-input {
-      border-bottom: 2px solid #000000;
-      padding-top: 17px;
-      padding-left: 16px;
-      padding-bottom: 11px;
-      width: 100%;
-      font-size: 19px;
-    }
+  .initials__name-input {
+    border-bottom: 2px solid #000000;
+    padding-top: 17px;
+    padding-left: 16px;
+    padding-bottom: 11px;
+    width: 100%;
+    font-size: 19px;
+  }
 
-    &__name {
-      margin-right: 25px;
-      font-size: 19px;
-    }
+  .initials__name {
+    margin-right: 25px;
+    font-size: 19px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1150px) {
   .initials {
     margin-left: 3px;
     margin-bottom: 0;
+  }
 
-    &__name-input {
-      padding-top: 14px;
-      padding-left: 16px;
-      padding-bottom: 13px;
-    }
+  .initials__name-input {
+    padding-top: 14px;
+    padding-left: 16px;
+    padding-bottom: 13px;
+  }
 
-    &__point {
-      width: 94%;
-    }
+  .initials__point {
+    width: 94%;
   }
 }

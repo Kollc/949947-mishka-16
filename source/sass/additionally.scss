@@ -6,14 +6,14 @@
   @include text(17px, 18px);
   border: 2px solid #444444;
   margin-top: 5px;
+}
 
-  &:hover {
-    border-color: #62d1ba;
-  }
+.additionally:hover {
+  border-color: #62d1ba;
+}
 
-  &:focus {
-    border-color: #62d1ba;
-  }
+.additionally:focus {
+  border-color: #62d1ba;
 }
 
 @media (min-width: 768px) {
@@ -23,7 +23,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1150px) {
   .additionally {
     width: 77%;
     font-size: 19px;

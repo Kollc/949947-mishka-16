@@ -2,40 +2,40 @@
   @include list();
   display: flex;
   flex-direction: column;
+}
 
-  &__item {
-    @include menu();
-    text-align: left;
-    padding-left: 24px;
-    margin: 0;
-  }
+.users-list__item {
+  @include menu();
+  text-align: left;
+  padding-left: 24px;
+  margin: 0;
+}
 
-  &__item:hover {
-    opacity: 0.6;
-  }
+.users-list__item:hover {
+  opacity: 0.6;
+}
 
-  &__item:active {
-    opacity: 0.3;
-  }
+.users-list__item:active {
+  opacity: 0.3;
+}
 
-  &__item svg {
-    margin-right: 24px;
-    opacity: 0.2;
-  }
+.users-list__item svg {
+  margin-right: 24px;
+  opacity: 0.2;
+}
 
-  &__item:hover svg {
-    fill: #63d1bb;
-    opacity: 1;
-  }
+.users-list__item:hover svg {
+  fill: #63d1bb;
+  opacity: 1;
+}
 
-  &__item:active svg {
-    fill: #63d1bb;
-    opacity: 1;
-  }
+.users-list__item:active svg {
+  fill: #63d1bb;
+  opacity: 1;
+}
 
-  &__point {
-    @include point();
-  }
+.type__point {
+  @include point();
 }
 
 @media (min-width: 768px) {
@@ -43,21 +43,21 @@
     flex-direction: row;
     width: auto;
     vertical-align: bottom;
+  }
 
-    &__search {
-      font-size: 0;
-    }
+  .users-list__search {
+    font-size: 0;
+  }
 
-    &__point {
-      border: none;
-      width: auto;
-      border-left: 1px solid #ececec;
-    }
+  .users-list__point {
+    border: none;
+    width: auto;
+    border-left: 1px solid #ececec;
+  }
 
-    &__item {
-      padding: 30px 0 30px 33px;
-      width: auto;
-    }
+  .users-list__item {
+    padding: 30px 0 30px 33px;
+    width: auto;
   }
 }
 
@@ -66,14 +66,14 @@
     order: 1;
     width: auto;
     padding-bottom: 0;
+  }
 
-    &__item {
-      padding: 30px 0 27px 30px;
-    }
+  .users-list__item {
+    padding: 30px 0 27px 30px;
+  }
 
-    &__item svg {
-      top: 30px;
-      left: 30px;
-    }
+  .users-list__item svg {
+    top: 30px;
+    left: 30px;
   }
 }

@@ -12,8 +12,10 @@
 
 .advantages__title {
   @include title();
-  margin: 0 0 85px;
+  margin: 0 auto;
+  margin-bottom: 85px;
   padding: 0 27px;
+  max-width: 320px;
 }
 
 .advantages__list {

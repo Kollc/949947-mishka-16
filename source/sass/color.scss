@@ -5,48 +5,48 @@
   flex-direction: column;
   margin-top: 4px;
   margin-bottom: 11px;
+}
 
-  &__point {
-    margin-bottom: 19px;
-  }
+.color__point {
+  margin-bottom: 19px;
+}
 
-  &__name {
-    @include title(17px,18px);
-    display: flex;
-    position: relative;
-    align-items: center;
-  }
+.color__name {
+  @include title(17px,18px);
+  display: flex;
+  position: relative;
+  align-items: center;
+}
 
-  &__name::before {
-    content: "";
-    width: 37px;
-    height: 38px;
-    border: 2px solid #444444;
-    margin-right: 20px;
-  }
+.color__name::before {
+  content: "";
+  width: 37px;
+  height: 38px;
+  border: 2px solid #444444;
+  margin-right: 20px;
+}
 
-  &__name:hover::before {
-    border-color: #63d1bb;
-  }
+.color__name:hover::before {
+  border-color: #63d1bb;
+}
 
-  &__name:focus::before {
-    border-color: #63d1bb;
-  }
+.color__name:focus::before {
+  border-color: #63d1bb;
+}
 
-  &__name:active::before {
-    border-color: #63d1bb;
-  }
+.color__name:active::before {
+  border-color: #63d1bb;
+}
 
-  input:checked + &__name::after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-image: url("./../img/icon-tick.svg");
-    background-repeat: no-repeat;
-    top: 10px;
-    left: 6px;
-  }
+input:checked + .color__name::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url("./../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  top: 10px;
+  left: 6px;
 }
 
 @media (min-width: 768px) {
@@ -54,43 +54,43 @@
     margin-left: 43px;
     margin-top: 0;
     flex-direction: row;
+  }
 
-    &__point {
-      width: 48%;
-    }
+  .color__point {
+    width: 48%;
+  }
 
-    &__list {
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 500px;
-    }
+  .color__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 500px;
+  }
 
-    &__name::before {
-      width: 52px;
-      height: 52px;
-      margin-right: 27px;
-    }
+  .color__name::before {
+    width: 52px;
+    height: 52px;
+    margin-right: 27px;
+  }
 
-    input:checked + &__name::after {
-      top: 14px;
-      left: 12px;
-      width: 30px;
-      height: 26px;
-    }
+  input:checked + .color__name::after {
+    top: 14px;
+    left: 12px;
+    width: 30px;
+    height: 26px;
+  }
 
-    &__name {
-      font-size: 19px;
-    }
+  .color__name {
+    font-size: 19px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1150px) {
   .color {
     margin-left: 0;
+  }
 
-    &__point {
-      width: 30%;
-      padding-right: 5px;
-    }
+  .color__point {
+    width: 30%;
+    padding-right: 5px;
   }
 }

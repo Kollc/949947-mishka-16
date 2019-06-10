@@ -1,0 +1,145 @@
+.detalied-description {
+  @include fontsS();
+  position: relative;
+  background-image: url("./../img/fresh.png");
+  background-repeat: no-repeat;
+  background-size: 100% 86%;
+  background-position: 0 5px;
+  min-height: 349px;
+  padding-bottom: 106px;
+  color: #ffffff;
+}
+
+.detalied-description__grid {
+  margin: 0 auto;
+  padding: 110px 45px 0;
+}
+
+.detalied-description__title {
+  font-size: 19px;
+}
+
+.detalied-description__text {
+  @include fontsS();
+  margin-bottom: 26px;
+}
+
+.detalied-description__pdf {
+  @include fontsM();
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ffffff;
+  width: 128px;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-left: -5px;
+}
+
+.detalied-description__pdf::after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  right: -21px;
+  top: 7px;
+}
+
+.detalied-description__pdf::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-image: url("./../img/pdf.png");
+  background-repeat: no-repeat;
+  right: -65px;
+  top: -1px;
+}
+@media (min-width: 768px) {
+  .detalied-description {
+    background-image: url("./../img/fresh-tablet.jpg");
+    background-size: 263px 273px;
+    background-position: 0 40px;
+    position: relative;
+    color: #000000;
+    padding-bottom: 0;
+  }
+
+  .detalied-description__grid {
+    padding: 55px 0 0;
+    width: 210px;
+    margin: 0 auto;
+  }
+
+  .detalied-description__text {
+    margin-bottom: 28px;
+  }
+
+  .detalied-description__title {
+    width: 300px;
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+
+  .detalied-description__pdf {
+    color: #000000;
+    width: 189px;
+    font-size: 18px;
+    border-color: #000000;
+  }
+
+  .detalied-description__ramka {
+    position: absolute;
+    background-image: url("./../img/ramka-tablet-pdf.png");
+    background-repeat: no-repeat;
+    width: 705px;
+    height: 350px;
+    background-position: 122px 5px;
+    z-index: -1;
+  }
+
+  .detalied-description__pdf::before {
+    background-size: 31px;
+    right: -51px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .detalied-description__pdf::after {
+    background-color: #000000;
+    right: 20px;
+    top: 9px;
+  }
+}
+@media(min-width: 1440px) {
+  .detalied-description {
+    min-height: 500px;
+    background-image: url("./../img/fresh-desktop.jpg"), url("./../img/tree-5.png");
+    background-repeat: no-repeat;
+    background-position: 0 82px, 1210px 98px;
+    background-size: 610px, 93px;
+  }
+
+  .detalied-description__ramka {
+    background-image: url("./../img/ramka-desktop-pdf.png");
+    width: 100%;
+    height: 100%;
+    background-position: 419px 33px;
+    background-size: 709px;
+  }
+
+  .detalied-description__grid {
+    padding-top: 116px;
+    margin: 0 auto 0 641px;
+    min-width: 300px;
+  }
+
+  .detalied-description__text {
+    font-size: 19px;
+    margin-bottom: 38px;
+  }
+}

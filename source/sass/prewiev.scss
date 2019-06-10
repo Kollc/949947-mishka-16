@@ -1,0 +1,241 @@
+.prewiev {
+  @include fontsS();
+}
+
+.prewiev__autor {
+  color: #ffffff;
+  padding: 184px 15px 0;
+  background-image: url("./../img/daria.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 484px;
+  margin: 0 auto;
+  min-height: 296px;
+  margin-bottom: 137px;
+  position: relative;
+}
+
+.prewiev__frame {
+  position: absolute;
+  background-image: url("./../img/decor-green.png");
+  background-repeat: no-repeat;
+  top: 105px;
+  left: 0;
+  width: 300px;
+  height: 350px;
+  z-index: 60;
+}
+
+.prewiev__grid {
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.prewiev__title {
+  margin: 0;
+  font-size: 31px;
+}
+
+.prewiev__description {
+  margin-top: 14px;
+  font-size: 15px;
+  margin-bottom: 35px;
+}
+
+.prewiev__name-paper b {
+  @include fontsM();
+  position: relative;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ffffff;
+  width: 128px;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.prewiev__name-paper b::after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  right: 0;
+  top: 7px;
+}
+
+.prewiev__face {
+  display: none;
+}
+
+.prewiev__inst-facebook {
+  display: none;
+}
+
+.prewiev__title-photo-section {
+  @include fontsM();
+  position: relative;
+  font-size: 19px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 46px;
+}
+
+.prewiev__title-photo-section::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 30px;
+  top: -57px;
+  right: 144px;
+  background-color: #cb98a8;
+}
+@media (min-width: 768px) {
+  .prewiev__autor {
+    background-image: none;
+    color: #000000;
+    margin-bottom: 92px;
+    padding-top: 280px;
+  }
+
+  .prewiev__title-photo-section {
+    font-size: 25px;
+    padding: 105px 0 0;
+    margin-bottom: 0;
+  }
+
+  .prewiev__title-photo-section::before {
+    height: 40px;
+    top: 0;
+    right: 367px;
+  }
+
+  .prewiev__face {
+    display: block;
+    position: relative;
+    margin-right: 54px;
+    margin-top: 101px;
+    z-index: 10;
+  }
+
+  .prewiev__grig-autor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: url("./../img/fresh-decor.jpg");
+    background-repeat: no-repeat;
+    background-position: 459px -58px;
+    padding-bottom: 80px;
+    margin-bottom: 148px;
+  }
+
+  .prewiev__inst-facebook {
+    display: block;
+    text-transform: uppercase;
+    opacity: 0.3;
+    margin-left: 58px;
+    width: 100%;
+  }
+
+  .prewiev__inst-facebook a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .prewiev__frame {
+    background-image: url("./../img/ramka-tablet.png");
+    background-size: 206px;
+    top: 100px;
+    left: 550px;
+    width: 120px;
+    height: 676px;
+    z-index: 0;
+  }
+
+  .prewiev__color-decor {
+    background-color: #f8f8f8;
+  }
+
+  .prewiev__title {
+    font-size: 38px;
+    margin-bottom: 35px;
+  }
+
+  .prewiev__name-paper b::after {
+    background-color: #000000;
+  }
+
+  .prewiev__name-paper b {
+    border-color: #000000;
+    padding-right: 20px;
+    font-size: 18px;
+  }
+
+  .prewiev__grid {
+    margin-bottom: 150px;
+    background-image: url("./../img/tree-1.png"), url("./../img/tree-2.png"), url("./../img/tree-3.png");
+    background-repeat: no-repeat;
+    background-size: 66px, 49px, 102px;
+    background-position: 670px 180px, 461px 30px, 9px 77px;
+  }
+}
+@media(min-width: 1440px) {
+  .prewiev__autor {
+    padding-top: 226px;
+    margin-left: 139px;
+  }
+
+  .prewiev__grig-autor {
+    background-image: url("./../img/fresh-decor-desktop.png");
+    background-position: 835px -73px;
+    margin-bottom: 96px;
+  }
+
+  .prewiev__face {
+    margin-right: 435px;
+    margin-top: 81px;
+    width: 345px;
+    height: 534px;
+  }
+
+  .prewiev__frame {
+    background-image: url("./../img/ramka-desktop.png");
+    top: 100px;
+    left: 755px;
+    width: 720px;
+    height: 678px;
+    background-size: 626px;
+    z-index: 0;
+  }
+
+  .prewiev__inst-facebook {
+    margin-top: 40px;
+    margin-left: 160px;
+  }
+
+  .prewiev__title {
+    font-size: 51px;
+    margin-bottom: 24px;
+  }
+
+  .prewiev__description {
+    font-size: 19px;
+  }
+
+  .prewiev__title-photo-section {
+    font-size: 38px;
+  }
+
+  .prewiev__grid {
+    background-size: 98px, 60px, 142px;
+    background-position: 1220px 209px, 877px 54px, 96px 104px;
+  }
+
+  .prewiev__title-photo-section::before {
+    top: -30px;
+    right: 704px;
+  }
+}

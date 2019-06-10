@@ -1,0 +1,182 @@
+.cost__list {
+  margin: 0 auto;
+  padding: 0 15px;
+  margin-bottom: 151px;
+}
+
+.cost__item {
+  list-style: none;
+}
+
+.cost {
+  display: flex;
+  flex-direction: column;
+}
+
+.cost__title {
+  @include fontsS();
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.cost__title::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 30px;
+  top: -58px;
+  right: 146px;
+  background-color: #cb98a8;
+}
+
+.cost__time-money {
+  @include fontsS();
+  margin-top: 10px;
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+
+.cost__pay--time {
+  padding: 0 40px;
+}
+
+.cost__pay--money {
+  padding: 0 100px;
+  position: relative;
+}
+
+.cost__pay--money::before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 2px;
+  top: 11px;
+  left: 75px;
+  background-color: #000000;
+}
+
+.cost__organization {
+  @include fontsS();
+  font-size: 15px;
+  line-height: 18px;
+  word-spacing: 1px;
+  margin-top: 0;
+  padding: 0 37px;
+  margin-bottom: 55px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .cost {
+    padding-top: 222px;
+    background-image: url("./../img/tree-6.png");
+    background-repeat: no-repeat;
+    background-size: 43px;
+    background-position: 441px 75px;
+  }
+
+  .cost__title {
+    font-size: 29px;
+  }
+
+  .cost__title::before {
+    height: 37px;
+    top: -104px;
+    right: 381px;
+  }
+
+  .cost__list {
+    display: flex;
+    padding: 53px 64px;
+    margin-bottom: 0;
+  }
+
+  .cost__item {
+    width: 230px;
+  }
+
+  .cost__photo--1 {
+    width: 239px;
+  }
+
+  .cost__item:nth-child(1) {
+    margin-top: 105px;
+  }
+
+  .cost__item:nth-child(2) {
+    margin-left: 26px;
+  }
+
+  .cost__organization {
+    padding: 0 8px;
+  }
+
+  .cost__pay--time {
+    padding: 0 20px;
+  }
+
+  .cost__pay--money {
+    padding: 0 90px;
+    position: relative;
+  }
+
+  .cost__item:nth-child(3) {
+    margin-left: 17px;
+    margin-top: 118px;
+  }
+}
+@media(min-width: 1440px) {
+  .cost {
+    padding-top: 206px;
+    background-image: url("./../img/tree-6.png"), url("./../img/tree-1.png");
+    background-size: 55px, 80px;
+    background-position: 880px 59px, 130px 212px;
+  }
+
+  .cost__title {
+    font-size: 43px;
+  }
+
+  .cost__list {
+    padding: 136px 60px;
+    min-width: 1100px;
+    justify-content: space-between;
+  }
+
+  .cost__title::before {
+    top: -134px;
+    right: 719px;
+  }
+
+  .cost__item {
+    width: 313px;
+  }
+
+  .cost__item:nth-child(1) {
+    margin-top: 171px;
+    width: 410px;
+  }
+
+  .cost__item:nth-child(2) {
+    margin-left: 12px;
+  }
+
+  .cost__item:nth-child(3) {
+    margin-top: 200px;
+  }
+
+  .cost__photo--1 {
+    width: 409px;
+    height: 650px;
+  }
+
+  .cost__photo--3 {
+    height: 496px;
+    width: 315px;
+  }
+
+  .cost__time-money {
+    margin-top: 36px;
+  }
+}

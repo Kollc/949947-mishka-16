@@ -1,0 +1,219 @@
+.about-me {
+  margin-top: 78px;
+  margin-bottom: 145px;
+}
+
+.about-me__title {
+  @include fontsS();
+  position: relative;
+  text-align: center;
+  font-size: 23px;
+  margin-bottom: 40px;
+}
+
+.about-me__new-offers {
+  display: none;
+}
+
+.about-me__title::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 30px;
+  top: -60px;
+  right: 160px;
+  background-color: #cb98a8;
+}
+
+.about-me__decor-img-first {
+  margin-right: 5px;
+}
+
+.about-me__decor-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-me__decor-img-second {
+  margin-top: 36px;
+}
+
+.about-me__description {
+  @include fontsS();
+  font-size: 15px;
+  margin: 0 auto;
+  padding: 0 25px;
+  margin-top: 24px;
+}
+
+.about-me__links {
+  @include fontsS;
+  color: #000000;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.about-me__links-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.about-me__work {
+  margin-top: 20px;
+  padding: 0 64px;
+}
+
+.about-me__work-links {
+  @include fontsM();
+  font-size: 15px;
+  position: relative;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 2px solid #000000;
+  padding-right: 30px;
+  padding-bottom: 8px;
+}
+
+.about-me__work-links::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  right: -3px;
+  top: 8px;
+  background-color: #000000;
+}
+@media (min-width: 768px) {
+  .about-me {
+    padding-top: 215px;
+    background-image: url("./../img/tree-4.png"), url("./../img/tree-5.png");
+    background-repeat: no-repeat;
+    background-size: 93px, 63px;
+    background-position: 20px 152px, 676px -3px;
+    margin-bottom: 0;
+  }
+
+  .about-me__title {
+    font-size: 29px;
+    margin-bottom: 52px;
+  }
+
+  .about-me__title::before {
+    height: 40px;
+    top: -106px;
+    right: 382px;
+  }
+
+  .about-me__decor-img-second {
+    margin-top: 48px;
+    margin-right: 64px;
+  }
+
+  .about-me__decor-img-first {
+    margin-left: 63px;
+  }
+
+  .about-me__grid-info {
+    display: flex;
+  }
+
+  .about-me__description {
+    width: 300px;
+    margin: -24px 0 0 80px;
+    font-size: 18px;
+    padding: 0;
+  }
+
+  .about-me__contacts-grid {
+    width: 300px;
+    margin-left: 22px;
+    margin-top: 5px;
+  }
+
+  .about-me__contacts-grid p {
+    text-align: left;
+  }
+
+  .about-me__links-container {
+    margin-top: 22px;
+  }
+
+  .about-me__work {
+    margin-top: 22px;
+    padding: 0;
+  }
+
+  .about-me__work-links {
+    font-size: 16px;
+  }
+}
+@media(min-width: 1440px) {
+  .about-me {
+    padding-top: 159px;
+    background-size: 113px, 113px;
+    background-position: 117px 53px, 1036px 117px;
+  }
+
+  .about-me__title {
+    font-size: 41px;
+    margin-bottom: 92px;
+  }
+
+  .about-me__title::before {
+    height: 39px;
+    top: -136px;
+    right: 710px;
+  }
+
+  .about-me__description {
+    margin-left: 52px;
+    font-size: 19px;
+  }
+
+  .about-me__decor-grid {
+    padding-left: 103px;
+  }
+
+  .about-me__desktop-grid {
+    display: flex;
+  }
+
+  .about-me__decor-img-first {
+    margin-right: 30px;
+  }
+
+  .about-me__grid-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 74px;
+    padding-right: 90px;
+    padding-top: 80px;
+    padding-bottom: 70px;
+    background-color: #f8f8f8;
+  }
+
+  .about-me__decor-img-second {
+    margin-right: 0;
+  }
+
+  .about-me__new-offers {
+    @include fontsS();
+    font-size: 15px;
+    display: block;
+    margin: 37px 0 6px 50px;
+  }
+
+  .about-me__links {
+    font-size: 20px;
+  }
+
+  .about-me__contacts-grid {
+    margin-left: 47px;
+  }
+
+  .about-me__work {
+    margin-top: 43px;
+  }
+}
